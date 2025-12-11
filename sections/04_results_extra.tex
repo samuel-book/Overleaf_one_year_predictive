@@ -1,0 +1,240 @@
+
+
+
+
+
+\textbf{ARE WE DOING THIS NEXT ANALYSIS (counterfactual)?}
+
+%%%%%%%%%%%%%%%%%%%%%% PROTOTYPE PATIENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Prototype patients and the effect of thrombolysis on time spent in care}
+
+In order to further understand and illustrate the effect of thrombolysis on outcomes we created eight \textit{prototype} patients. The base patient in these patients was a patient that would generally be considered an ideal candidate for thrombolysis. We then altered each feature of that patient in a controlled way. This gave the following patients:
+
+\begin{enumerate}
+    \item \textit{Ideal}: No prior disability (mRS 0), age 72.5, no atrial fibrillation diagnosis, NIHSS 15, precise onset time, onset to thrombolysis time 2 hours. The patient attended a hospital with the most neutral contribution towards use of thrombolysis.
+    \item \textit{Mild stroke}: As \textit{Ideal} but NIHSS 3
+    \item \textit{Severe stroke}: As \textit{Ideal} but NIHSS 25
+    \item \textit{Prior disability 3}: As \textit{Ideal} but prior disability mRS 3
+    \item \textit{Prior disability 4}:  As \textit{Ideal} but prior disability mRS 4
+    \item \textit{Atrial fibrillation diagnosis}: As \textit{Ideal} but with an atrial fibrillation diagnosis
+    \item \textit{Older}: As \textit{Ideal} but age 87.5
+    \item \textit{Imprecise onset time}: As \textit{Ideal} but imprecise onset time
+\end{enumerate}
+
+We predicted mRS distributions for each patient with and without thrombolysis. We also classified whether the patient would likely have both an improvement in the probability-weighted disability at discharge and a reduction in probability of having the worst outcomes of mRS 5-6. Results are shown in figure \ref{fig:counterfactual_bar_plot}. Thrombolysis was predicted to improve outcomes across all patients, but the benefit was significantly lower with mild stroke.
+
+\begin{figure}
+\centering
+ {\includegraphics[width = 6.1in]{./images/060_xgb_mrs_distributions_bar_plot_table_bw.jpg}}\\%{./images/060_xgb_mrs_distributions_999999_bar_plot.jpg}}\\%060_bar_plot.png}}\\
+ \caption{Probability distribution of disability at discharge (as mRS score) for eight defined patients. i. \textit{Ideal}: No prior disability (mRS 0), age 72.5, no afib diagnosis, NIHSS 15, precise onset time, onset to treatment 2 hours, attended stroke team with most neutral contribution towards use of thrombolysis. ii. \textit{Mild stroke}: As \textit{Ideal} but NIHSS 3. iii. \textit{Severe stroke}: As \textit{Ideal} but NIHSS 25. iv. \textit{Prior disability (mRS3)}: As \textit{Ideal} but prior disability mRS 3. v. \textit{Prior disability (mRS 4)}:  As \textit{Ideal} but prior disability mRS 4. vi. \textit{Atrial fibrillation diagnosis}: As \textit{Ideal} but with an atrial fibrillation diagnosis. vii. \textit{Older (87.5 years)}: As \textit{Ideal} but age 87.5. viii. \textit{Imprecise onset time}: As \textit{Ideal} but imprecise onset time. Inset table shows the values for the two criteria that defines whether a patient has a better outcome with thrombolysis, and the treatment decision that this method would decide.}
+ \label{fig:counterfactual_bar_plot}
+\end{figure}
+
+
+
+
+% EXTRA IMAGES FOR DESCRIPTION OF TIME IN HOME, CARE, DEAD
+% ccu085_041_violinplot_365_days_post_stroke.png
+
+% ccu085_041_age0to60_violinplot_365_days_post_stroke.png
+% ccu085_041_age60to80_violinplot_365_days_post_stroke.png
+% ccu085_041_age80plus_violinplot_365_days_post_stroke.png
+% ccu085_041_type_isch_violinplot_365_days_post_stroke.png
+% ccu085_041_type_hae_violinplot_365_days_post_stroke.png
+% ccu085_041_sex_m_violinplot_365_days_post_stroke.png
+% ccu085_041_sex_f_violinplot_365_days_post_stroke.png
+% ccu085_041_nihss21_42_violinplot_365_days_post_stroke.png
+% ccu085_041_nihss16_20_violinplot_365_days_post_stroke.png
+% ccu085_041_nihss5_15_violinplot_365_days_post_stroke.png
+% ccu085_041_nihss1_4_violinplot_365_days_post_stroke.png
+% ccu085_041_nihss0_violinplot_365_days_post_stroke.png
+% ccu085_041_imd5_violinplot_365_days_post_stroke.png
+% ccu085_041_imd4_violinplot_365_days_post_stroke.png
+% ccu085_041_imd3_violinplot_365_days_post_stroke.png
+% ccu085_041_imd2_violinplot_365_days_post_stroke.png
+% ccu085_041_imd1_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_white_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_unknown_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_other_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_mult_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_black_violinplot_365_days_post_stroke.png
+% ccu085_041_eth_asian_violinplot_365_days_post_stroke.png
+
+% %
+
+
+% EXTRA IMAGES FOR SURVIVAL ANALYSIS
+% ccu085_053h_hazard_ratios_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.csv
+
+% ccu085_053h_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_cox_hazard_ratios_for_survival_365_days_post_stroke.png
+
+% ccu085_053h_forest_plot_hazard_ratios_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_covid_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_ethnicity_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_imd_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_nihss_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_prior_mrs_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_sex_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_stroketype_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+% ccu085_053h_treatment_hazard ratios_applied_to_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png
+
+
+\begin{landscape}
+
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+        ~ & ~ & Count (nearest 5) & ~ & Home & ~ & ~ & ~ & ~ & ~ & Dead & ~ & ~ & ~ & ~ & ~ & In care & ~ & ~ & ~ & ~ & ~ & Additional days home & ~ & ~ & Additional days dead & ~ & ~ & Additional days in care & ~ & ~ & ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ & ~ & Stroke & ~ & ~ & Control & ~ & ~ & Stroke & ~ & ~ & Control & ~ & ~ & Stroke & ~ & ~ & Control & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        Population & subgroup & Stroke & Control & mean & median & std & mean & median & std & mean & median & std & mean & median & std & mean & median & std & mean & median & std & mean & median & std & mean & median & std & mean & median & std & ~ & Population & subgroup \\ \hline
+        ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        Whole population & ~ & 236680 & 236680 & 266.4 & 346.5 & 138.6 & 352.8 & 365.0 & 50.8 & 75.4 & 0.0 & 135.7 & 9.8 & 0.0 & 48.0 & 23.2 & 10.0 & 32.7 & 2.4 & 0.0 & 10.2 & -86.4 & -15.5 & 143.5 & 65.7 & 0.0 & 140.4 & 20.8 & 8.5 & 34.1 & ~ & Whole population & ~ \\ \hline
+        Age & 60-80 year olds & 116240 & 116240 & 280.7 & 350.0 & 129.1 & 358.3 & 365.0 & 36.7 & 61.2 & 0.0 & 125.6 & 4.9 & 0.0 & 34.1 & 23.2 & 9.0 & 33.0 & 1.8 & 0.0 & 9.0 & -77.7 & -13.0 & 133.7 & 56.3 & 0.0 & 129.7 & 21.3 & 8.0 & 34.2 & ~ & Age & 60-80 year olds \\ \hline
+        ~ & over 80s & 71960 & 71960 & 204.8 & 296.0 & 156.9 & 336.5 & 365.0 & 76.0 & 134.6 & 0.0 & 157.9 & 23.7 & 0.0 & 72.8 & 25.6 & 15.5 & 28.4 & 4.7 & 0.0 & 13.5 & -131.7 & -54.0 & 172.6 & 110.9 & 0.0 & 172.1 & 20.8 & 13.0 & 31.4 & ~ & ~ & over 80s \\ \hline
+        ~ & under 60s & 48480 & 48480 & 323.6 & 359.0 & 88.6 & 363.7 & 365.0 & 14.8 & 21.7 & 0.0 & 80.7 & 0.7 & 0.0 & 13.2 & 19.8 & 5.5 & 37.1 & 0.5 & 0.0 & 5.5 & -40.2 & -6.0 & 89.9 & 20.9 & 0.0 & 81.8 & 19.3 & 5.0 & 37.5 & ~ & ~ & under 60s \\ \hline
+        Sex & F & 110620 & 110620 & 253.4 & 339.5 & 144.7 & 351.3 & 365.0 & 53.6 & 87.9 & 0.0 & 143.2 & 11.0 & 0.0 & 50.9 & 23.7 & 11.0 & 31.3 & 2.7 & 0.0 & 10.4 & -98.0 & -21.5 & 150.1 & 76.9 & 0.0 & 148.4 & 21.1 & 10.0 & 32.8 & ~ & Sex & F \\ \hline
+        ~ & M & 126060 & 126060 & 277.8 & 351.0 & 131.9 & 354.1 & 365.0 & 48.1 & 64.5 & 0.0 & 127.7 & 8.7 & 0.0 & 45.2 & 22.7 & 9.0 & 33.8 & 2.2 & 0.0 & 10.0 & -76.3 & -12.0 & 136.6 & 55.8 & 0.0 & 132.2 & 20.5 & 7.5 & 35.2 & ~ & ~ & M \\ \hline
+        Ethnicity & Asian or Asian British & 12160 & 12160 & 290.5 & 351.5 & 121.4 & 359.2 & 365.0 & 35.5 & 51.7 & 0.0 & 117.3 & 4.4 & 0.0 & 33.6 & 22.8 & 9.5 & 33.3 & 1.4 & 0.0 & 7.2 & -68.8 & -12.5 & 124.8 & 47.3 & 0.0 & 120.5 & 21.5 & 9.0 & 34.0 & ~ & Ethnicity & Asian or Asian British \\ \hline
+        ~ & Black, Black British, Caribbean or African & 6550 & 6550 & 287.0 & 346.0 & 118.6 & 359.4 & 365.0 & 34.6 & 47.5 & 0.0 & 112.0 & 4.2 & 0.0 & 32.2 & 30.5 & 13.8 & 43.4 & 1.4 & 0.0 & 8.3 & -72.4 & -17.5 & 121.2 & 43.3 & 0.0 & 114.6 & 29.1 & 13.0 & 44.2 & ~ & ~ & Black, Black British, Caribbean or African \\ \hline
+        ~ & Mixed or multiple ethnic groups & 1645 & 1645 & 285.3 & 349.0 & 122.7 & 357.5 & 365.0 & 39.7 & 52.5 & 0.0 & 116.8 & 5.8 & 0.0 & 37.3 & 27.2 & 11.0 & 37.9 & 1.7 & 0.0 & 7.8 & -72.2 & -14.5 & 122.6 & 46.7 & 0.0 & 116.7 & 25.5 & 10.0 & 38.5 & ~ & ~ & Mixed or multiple ethnic groups \\ \hline
+        ~ & Other ethnic group & 2085 & 2085 & 281.9 & 350.8 & 127.6 & 357.5 & 365.0 & 41.8 & 57.8 & 0.0 & 123.2 & 6.0 & 0.0 & 39.5 & 25.3 & 10.0 & 37.5 & 1.5 & 0.0 & 8.3 & -75.6 & -13.0 & 132.0 & 51.8 & 0.0 & 126.9 & 23.8 & 9.0 & 38.3 & ~ & ~ & Other ethnic group \\ \hline
+        ~ & Unknown & 955 & 955 & 206.0 & 319.0 & 167.5 & 358.3 & 365.0 & 41.7 & 140.9 & 0.0 & 166.5 & 6.3 & 0.0 & 40.7 & 18.1 & 6.5 & 26.5 & 0.4 & 0.0 & 3.5 & -152.3 & -43.0 & 169.6 & 134.6 & 0.0 & 168.7 & 17.7 & 6.0 & 26.8 & ~ & ~ & Unknown \\ \hline
+        ~ & White & 213285 & 213285 & 264.3 & 346.0 & 139.9 & 352.1 & 365.0 & 52.1 & 77.7 & 0.0 & 137.1 & 10.3 & 0.0 & 49.2 & 23.0 & 10.0 & 32.1 & 2.6 & 0.0 & 10.5 & -87.8 & -16.0 & 145.1 & 67.4 & 0.0 & 142.1 & 20.4 & 8.5 & 33.7 & ~ & ~ & White \\ \hline
+        IMD quintile & 0 & 48060 & 36165 & 271.3 & 346.5 & 134.3 & 350.6 & 365.0 & 55.6 & 69.3 & 0.0 & 131.1 & 11.7 & 0.0 & 52.6 & 24.4 & 10.5 & 34.2 & 2.7 & 0.0 & 10.6 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & IMD quintile & 0 \\ \hline
+        ~ & 1 & 46835 & 43160 & 267.5 & 346.0 & 137.3 & 352.2 & 365.0 & 52.3 & 73.5 & 0.0 & 134.3 & 10.3 & 0.0 & 49.4 & 23.9 & 10.0 & 33.7 & 2.6 & 0.0 & 10.7 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & 1 \\ \hline
+        ~ & 2 & 48310 & 49690 & 265.8 & 346.5 & 139.1 & 353.0 & 365.0 & 50.3 & 76.2 & 0.0 & 136.2 & 9.6 & 0.0 & 47.6 & 23.0 & 10.0 & 32.6 & 2.4 & 0.0 & 10.1 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & 2 \\ \hline
+        ~ & 3 & 48220 & 53370 & 263.7 & 346.5 & 140.7 & 353.3 & 365.0 & 49.4 & 78.7 & 0.0 & 138.0 & 9.3 & 0.0 & 46.6 & 22.6 & 9.5 & 31.8 & 2.4 & 0.0 & 10.3 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & 3 \\ \hline
+        ~ & 4 & 45260 & 54295 & 263.5 & 347.0 & 141.3 & 354.1 & 365.0 & 47.9 & 79.5 & 0.0 & 138.6 & 8.7 & 0.0 & 45.3 & 22.0 & 9.0 & 30.8 & 2.2 & 0.0 & 9.6 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & 4 \\ \hline
+        NIHSS arrival & minor (NIHSS 1-4) & 98240 & 98240 & 314.2 & 358.0 & 100.9 & 354.4 & 365.0 & 47.3 & 34.3 & 0.0 & 94.6 & 8.4 & 0.0 & 44.6 & 16.5 & 6.0 & 26.1 & 2.2 & 0.0 & 9.8 & -40.2 & -5.5 & 108.5 & 26.0 & 0.0 & 102.2 & 14.2 & 5.0 & 27.6 & ~ & NIHSS arrival & minor (NIHSS 1-4) \\ \hline
+        ~ & moderate (NIHSS 5-15) & 79615 & 79615 & 258.2 & 333.0 & 136.5 & 351.7 & 365.0 & 53.0 & 77.4 & 0.0 & 134.1 & 10.7 & 0.0 & 50.2 & 29.4 & 17.0 & 34.8 & 2.6 & 0.0 & 10.6 & -93.5 & -27.5 & 142.5 & 66.8 & 0.0 & 139.8 & 26.8 & 15.0 & 36.2 & ~ & ~ & moderate (NIHSS 5-15) \\ \hline
+        ~ & moderate to severe (NIHSS 16-20) & 16350 & 16350 & 160.0 & 142.0 & 153.5 & 350.3 & 365.0 & 55.5 & 167.3 & 141.0 & 166.6 & 11.9 & 0.0 & 52.6 & 37.6 & 22.0 & 42.4 & 2.8 & 0.0 & 10.8 & -190.3 & -165.0 & 158.7 & 155.4 & 80.0 & 170.6 & 34.9 & 20.0 & 44.0 & ~ & ~ & moderate to severe (NIHSS 16-20) \\ \hline
+        ~ & no symptoms (NIHSS 0) & 23050 & 23050 & 312.3 & 359.0 & 105.1 & 355.4 & 365.0 & 44.5 & 36.7 & 0.0 & 98.3 & 7.6 & 0.0 & 41.9 & 16.0 & 6.0 & 26.4 & 2.1 & 0.0 & 9.6 & -43.0 & -5.0 & 111.1 & 29.1 & 0.0 & 104.3 & 13.9 & 5.0 & 27.9 & ~ & ~ & no symptoms (NIHSS 0) \\ \hline
+        ~ & severe (NIHSS 21-42) & 19335 & 19335 & 92.3 & 1.0 & 138.1 & 348.0 & 365.0 & 59.9 & 244.2 & 348.0 & 157.3 & 13.9 & 0.0 & 57.1 & 28.5 & 11.0 & 40.3 & 3.1 & 0.0 & 10.6 & -255.7 & -359.0 & 146.2 & 230.3 & 341.0 & 163.3 & 25.4 & 10.0 & 42.1 & ~ & ~ & severe (NIHSS 21-42) \\ \hline
+        Stroke type & I & 206795 & 206795 & 275.1 & 350.0 & 133.1 & 352.8 & 365.0 & 50.8 & 67.3 & 0.0 & 128.8 & 9.8 & 0.0 & 48.0 & 22.6 & 10.0 & 31.9 & 2.4 & 0.0 & 10.1 & -77.7 & -13.0 & 138.3 & 57.5 & 0.0 & 133.9 & 20.2 & 8.0 & 33.3 & ~ & Stroke type & I \\ \hline
+        ~ & PIH & 29025 & 29025 & 204.3 & 296.0 & 159.0 & 352.6 & 365.0 & 51.3 & 133.2 & 0.0 & 165.8 & 9.9 & 0.0 & 48.3 & 27.5 & 12.0 & 37.2 & 2.5 & 0.0 & 10.7 & -148.3 & -62.5 & 163.3 & 123.3 & 0.0 & 169.5 & 25.0 & 11.0 & 38.9 & ~ & ~ & PIH \\ \hline
+        % Treatment & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & Treatment & ~ \\ \hline
+        % ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        % ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        % Prior disability & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & These 0 correct? Means >50\% of stroke patients not die. & ~ & ~ & ~ & ~ & ~ & Prior disability & ~ \\ \hline
+        % ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+    \end{tabular}
+
+\end{table}
+
+\end{landscape}
+
+
+
+
+
+
+    
+% \begin{table}[!ht]
+%     \centering
+%     \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+%     \hline
+%         Feature (baseline value) & Feature value & coef & exp(coef) & se(coef) & coef lower 95\% & coef upper 95\% & exp(coef) lower 95\% & exp(coef) upper 95\% & cmp to & z & p & -log2(p) & count \\ \hline
+%         Sex (male) & Female & -0.1 & 0.9 & 0.0 & -0.1 & -0.1 & 0.9 & 0.9 & 0.0 & -15.1 & 0.0 & 168.0 & 110620 \\ \hline
+%         Age (under 60) & 60-80 years old & 0.9 & 2.5 & 0.0 & 0.9 & 1.0 & 2.4 & 2.6 & 0.0 & 51.7 & 0.0 & inf & 116240 \\ \hline
+%         ~ & Over 80 years old & 1.5 & 4.6 & 0.0 & 1.5 & 1.6 & 4.5 & 4.8 & 0.0 & 83.6 & 0.0 & inf & 71960 \\ \hline
+%         Ethnicity (white) & Asian or Asian British & -0.4 & 0.7 & 0.0 & -0.5 & -0.4 & 0.6 & 0.7 & 0.0 & -19.1 & 0.0 & 268.3 & 12160 \\ \hline
+%         ~ & Black, Black British, Carribean or African & -0.4 & 0.6 & 0.0 & -0.5 & -0.4 & 0.6 & 0.7 & 0.0 & -14.5 & 0.0 & 155.8 & 6550 \\ \hline
+%         ~ & Multiple ethnic groups & -0.3 & 0.8 & 0.1 & -0.4 & -0.2 & 0.7 & 0.9 & 0.0 & -4.7 & 0.0 & 18.5 & 1645 \\ \hline
+%         ~ & Other ethnic group & -0.2 & 0.8 & 0.0 & -0.3 & -0.1 & 0.7 & 0.9 & 0.0 & -5.0 & 0.0 & 20.7 & 2085 \\ \hline
+%         ~ & Unknown & 0.7 & 2.0 & 0.0 & 0.6 & 0.8 & 1.8 & 2.2 & 0.0 & 14.0 & 0.0 & 145.5 & 955 \\ \hline
+%         IMD quintile (1) & IMD quintile 2 & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 & 1.0 & 1.0 & 0.0 & 0.3 & 0.8 & 0.4 & 46835 \\ \hline
+%         ~ & IMD quintile 3 & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 & 1.0 & 1.0 & 0.0 & -1.3 & 0.2 & 2.3 & 48310 \\ \hline
+%         ~ & IMD quintile 4 & 0.0 & 1.0 & 0.0 & -0.1 & 0.0 & 1.0 & 1.0 & 0.0 & -2.0 & 0.0 & 4.4 & 48220 \\ \hline
+%         ~ & IMD quintile 5 & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 & 1.0 & 1.0 & 0.0 & -1.5 & 0.1 & 2.9 & 45260 \\ \hline
+%         Stroke type (ischaemic) & Haemorragic stroke & 0.6 & 1.7 & 0.0 & 0.5 & 0.6 & 1.7 & 1.8 & 0.0 & 53.5 & 0.0 & inf & 29025 \\ \hline
+%         Stroke severity on arrival (NIHSS 0) & Minor stroke NIHSS 1-4 & -0.1 & 0.9 & 0.0 & -0.1 & 0.0 & 0.9 & 1.0 & 0.0 & -4.5 & 0.0 & 17.0 & 98240 \\ \hline
+%         ~ & Moderate stroke NIHSS 5-15 & 0.6 & 1.7 & 0.0 & 0.5 & 0.6 & 1.7 & 1.8 & 0.0 & 29.6 & 0.0 & 638.0 & 79615 \\ \hline
+%         ~ & Moderate to severe stroke NIHSS 16-20 & 1.5 & 4.3 & 0.0 & 1.4 & 1.5 & 4.1 & 4.5 & 0.0 & 69.7 & 0.0 & inf & 16345 \\ \hline
+%         ~ & Severe stroke NIHSS 21+ & 2.0 & 7.8 & 0.0 & 2.0 & 2.1 & 7.5 & 8.1 & 0.0 & 102.6 & 0.0 & inf & 19335 \\ \hline
+%         ~ & Stroke severity missing & 1.3 & 3.8 & 0.2 & 1.0 & 1.7 & 2.7 & 5.4 & 0.0 & 7.7 & 0.0 & 45.8 & 95 \\ \hline
+%         Prior disability (mRS 0) & mRS1 & 0.3 & 1.4 & 0.0 & 0.3 & 0.3 & 1.3 & 1.4 & 0.0 & 25.2 & 0.0 & 462.8 & 43125 \\ \hline
+%         ~ & mRS2 & 0.6 & 1.9 & 0.0 & 0.6 & 0.6 & 1.8 & 1.9 & 0.0 & 46.7 & 0.0 & inf & 26630 \\ \hline
+%         ~ & mRS3 & 0.9 & 2.4 & 0.0 & 0.8 & 0.9 & 2.3 & 2.4 & 0.0 & 71.4 & 0.0 & inf & 29495 \\ \hline
+%         ~ & mRS4 & 1.0 & 2.7 & 0.0 & 1.0 & 1.0 & 2.6 & 2.8 & 0.0 & 70.5 & 0.0 & inf & 14255 \\ \hline
+%         ~ & mRS5 & 1.0 & 2.8 & 0.0 & 1.0 & 1.1 & 2.7 & 2.9 & 0.0 & 47.4 & 0.0 & inf & 3620 \\ \hline
+%         Acute treatment (none) & IVT \& MT received after 270 minutes from stroke onset & -0.3 & 0.8 & 0.2 & -0.6 & 0.0 & 0.6 & 1.1 & 0.0 & -1.6 & 0.1 & 3.3 & 145 \\ \hline
+%         ~ & IVT and MT received before 270 minutes from stroke onset & -0.9 & 0.4 & 0.1 & -1.0 & -0.8 & 0.4 & 0.5 & 0.0 & -12.8 & 0.0 & 121.9 & 1230 \\ \hline
+%         ~ & IVT received before 270 minutes from stroke onset, MT received after 270 minutes from stroke onset & -0.5 & 0.6 & 0.1 & -0.6 & -0.4 & 0.5 & 0.7 & 0.0 & -9.2 & 0.0 & 65.0 & 1405 \\ \hline
+%         ~ & IVT received after 270 minutes from stroke onset, no MT & -0.3 & 0.8 & 0.1 & -0.4 & -0.2 & 0.7 & 0.8 & 0.0 & -4.8 & 0.0 & 19.2 & 1370 \\ \hline
+%         ~ & IVT received before 270 minutes from stroke onset, no MT & -0.4 & 0.7 & 0.0 & -0.4 & -0.4 & 0.7 & 0.7 & 0.0 & -25.1 & 0.0 & 459.6 & 21255 \\ \hline
+%         ~ & No IVT, MT received after 270 minutes from stroke onset & -0.2 & 0.8 & 0.0 & -0.3 & -0.2 & 0.7 & 0.9 & 0.0 & -5.5 & 0.0 & 25.0 & 2035 \\ \hline
+%         ~ & No IVT, MT received before 270 minutes from stroke onset & -0.6 & 0.6 & 0.1 & -0.7 & -0.4 & 0.5 & 0.7 & 0.0 & -7.4 & 0.0 & 42.3 & 650 \\ \hline
+%         Covid status (no covid infection within 30 days of event, no covid vaccination within 12 months of event) & No covid infection within 30 days of event, covid vaccination within 12 months of event & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 & 1.0 & 1.0 & 0.0 & -3.0 & 0.0 & 8.5 & 124995 \\ \hline
+%         ~ & Covid infection within 30 days of event, no covid vaccination within 12 months of event & 0.2 & 1.3 & 0.0 & 0.2 & 0.3 & 1.2 & 1.3 & 0.0 & 8.2 & 0.0 & 52.2 & 3445 \\ \hline
+%         ~ & Covid infection within 30 days of event, covid vaccination within 12 months of event & 0.1 & 1.1 & 0.0 & 0.0 & 0.1 & 1.0 & 1.1 & 0.0 & 3.1 & 0.0 & 9.1 & 5105 \\ \hline
+%     \end{tabular}
+%     \label{tab:hazard_ratios}
+% \end{table}
+
+%\end{landscape}
+
+% putting table here, but not using atm. will instead load csv up with paper
+\newpage
+
+%\begin{landscape}
+
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+        Feature (baseline value) & Feature value & count & exp(coef) & se(coef) & p \\ \hline
+        Sex (male) & Female & 110620 & 0.90 & 0.00 & 0.00 \\ \hline
+        Age (under 60) & 60-80 & 116240 & 2.50 & 0.00 & 0.00 \\ \hline
+        ~ & Over 80 & 71960 & 4.60 & 0.00 & 0.00 \\ \hline
+        Ethnicity (white) & Asian & 12160 & 0.70 & 0.00 & 0.00 \\ \hline
+        ~ & Black & 6550 & 0.60 & 0.00 & 0.00 \\ \hline
+        ~ & Multiple ethnic groups & 1645 & 0.80 & 0.10 & 0.00 \\ \hline
+        ~ & Other ethnic group & 2085 & 0.80 & 0.00 & 0.00 \\ \hline
+        ~ & Unknown & 955 & 2.00 & 0.00 & 0.00 \\ \hline
+        IMD quintile (1) & IMD quintile 2 & 46835 & 1.00 & 0.00 & 0.80 \\ \hline
+        ~ & IMD quintile 3 & 48310 & 1.00 & 0.00 & 0.20 \\ \hline
+        ~ & IMD quintile 4 & 48220 & 1.00 & 0.00 & 0.00 \\ \hline
+        ~ & IMD quintile 5 & 45260 & 1.00 & 0.00 & 0.10 \\ \hline
+        Stroke type (ischaemic) & Haemorrhagic stroke & 29025 & 1.70 & 0.00 & 0.00 \\ \hline
+        Stroke severity on arrival (NIHSS 0) & NIHSS 1-4 & 98240 & 0.90 & 0.00 & 0.00 \\ \hline
+        ~ & NIHSS 5-15 & 79615 & 1.70 & 0.00 & 0.00 \\ \hline
+        ~ & NIHSS 16-20 & 16345 & 4.30 & 0.00 & 0.00 \\ \hline
+        ~ & NIHSS 21+ & 19335 & 7.80 & 0.00 & 0.00 \\ \hline
+        ~ & Unknown & 95 & 3.80 & 0.20 & 0.00 \\ \hline
+        Prior disability (mRS 0) & mRS1 & 43125 & 1.40 & 0.00 & 0.00 \\ \hline
+        ~ & mRS2 & 26630 & 1.90 & 0.00 & 0.00 \\ \hline
+        ~ & mRS3 & 29495 & 2.40 & 0.00 & 0.00 \\ \hline
+        ~ & mRS4 & 14255 & 2.70 & 0.00 & 0.00 \\ \hline
+        ~ & mRS5 & 3620 & 2.80 & 0.00 & 0.00 \\ \hline
+        Acute treatment (none) & Late IVT \& MT & 145 & 0.80 & 0.20 & 0.10 \\ \hline
+        ~ & Early IVT and MT & 1230 & 0.40 & 0.10 & 0.00 \\ \hline
+        ~ & Early IVT, late MT & 1405 & 0.60 & 0.10 & 0.00 \\ \hline
+        ~ & Late IVT only & 1370 & 0.80 & 0.10 & 0.00 \\ \hline
+        ~ & Early IVT only & 21255 & 0.70 & 0.00 & 0.00 \\ \hline
+        ~ & Late MT only & 2035 & 0.80 & 0.00 & 0.00 \\ \hline
+        ~ & Early MT only & 650 & 0.60 & 0.10 & 0.00 \\ \hline
+        Covid (none) & No infection, yes vaccination & 124995 & 1.00 & 0.00 & 0.00 \\ \hline
+        ~ & No infection, no vaccination & 3445 & 1.30 & 0.00 & 0.00 \\ \hline
+        ~ & Yes infection, yes vaccination & 5105 & 1.10 & 0.00 & 0.00 \\ \hline
+    \end{tabular}
+    \label{tab:hazard_ratios}
+    
+    \caption{Hazard ratio for the feature values that deviate away from the baseline stroke patient characteristics. 'exp(coef)': exponential of the coefficient, where 0-1 represents a benefit to survival, and 1+ represents a disbenefit to survival.	'se(coef)': The standard error of the coefficient. 'p': p-value of the coefficient.}
+\end{table}
+
+

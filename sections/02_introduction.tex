@@ -1,0 +1,44 @@
+\section{Introduction}
+
+% Likely to be too long for ESJ but we can keep it longer for medRxiv
+
+% Include
+% 1) What is the problem?
+% 2) What do we know about low and varying use of thrombolysis
+% 3) What do we not know
+% 4) How are we addressing what we don't know
+
+% 1) What is the problem?
+
+Stroke remains one of the top three global causes of death and disability \cite{feigin_global_2021}. Despite reductions in age-standardised rates of stroke, ageing populations are driving an increase in the absolute number of strokes \cite{feigin_global_2021}. 
+
+The problem: stroke is a significant disease burden, has in the UK not any national analysis about the burden it is on NHS and on people (how many days consumed by having a stroke). Some point in some model get covid in!
+
+
+% 2) What do we know about use of healthcare resources in the year following a stroke
+Across Europe, in 2017, stroke was found to cost healthcare systems \texteuro 27 billion, or 1.7\% of health expenditure \cite{luengo-fernandez_economic_2020}. The burden is increasing; it has been estimated that the number of stroke survivors aged 45 and over in the UK will more than double between 2015 and 2035 \cite{king_future_2020}.
+
+% 3) What do we not know
+
+There has not yet been a national analysis in the UK about the burden stroke has on the NHS, and on people, and we do not know which factors contribute to these healthcare resource uses. Since patients who have a stroke are generally in the ageing population, we do not know if they would use healthcare for other reasons.
+
+% 4) How are we addressing what we don't know
+
+We will qualtify the healthcare resources in the year following a stroke, and compare the use of healthcare resources in stroke patients to a control population, a population that has not had a stroke but is matched on age, sex and ethnicity.
+
+We set out with the following aims:
+
+\begin{itemize}
+    \item To compare the use of healthcare resources (in terms of number of days spent in care) for the year following their stroke for the stroke population and a control population.
+    \item To compare the number of days spent at home for the year following their stroke for the stroke population and a control population.
+    \item To use survival analysis (Kaplan-Meier and Cox) to quantify hazard ratios for features on the likely duration of survival following a stroke.
+    \item To build an explainable machine learning model to predict the number of days spent in care for the year following a stroke, and to understand how patient features and treatment options influence this health care resource use. We planned to use an \emph{eXtreme Gradient Boosting model \cite{chen_xgboost_2016}} (XGBoost) to make predictions and then use an additional \emph{SHapley Additive exPlanations} \cite{lundberg_unified_2017} (SHAP) model to explain the contribution of each feature to the model prediction.   
+\end{itemize}
+
+
+MrClean showed that the decline to no benefit occurred at 7.5 hours. We isolate effect of MT in a pilot study (on RHS from SAM2). Also saw that at 7.5 hours there’s no benefit in MT in the general population.
+
+Overlapping work with Catalyst (access to SDE), looking at all stroke patients arrive between Nov 2019 and March 2023.
+How much is stroke adding to the NHS burden when we compare similar patients (had stroke vs not had stroke).
+
+Control patients have on average 2.4 bed days in-patient vs 23.2 bed days.

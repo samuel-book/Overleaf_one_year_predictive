@@ -1,0 +1,65 @@
+% Set footnotes to use letters
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+\section{Method and patients}
+
+Note: Further method details may be found in the supplemental appendix.
+
+\subsection{Data sources and patient selection}
+
+All analysis were performed in the NHS England (NHSE) Secure Data Environment (SDE) using patient level data from seven internally hosted datasets:
+
+\begin{enumerate}
+    \item Sentinel Stroke National Audit Programme (SSNAP): Acute stroke pathway data for first 72 hours of acute stroke care
+    \item Demographics: Date of death, sex, age group (5 years), ethnicity (5 categories)
+    \item Lower Super Output Area/Office for National Statistics?: Region, IMD, LSOA, RUC11 code
+    \item hometime: Number of days spent at home in 365 days following stroke event
+    \item Covid infection \& vaccination: Infection within 30 days and/or vaccination within 1 year of date of event
+    \item Primary healthcare (control only): patients from which to select control patients
+    \item Hospital Episode Statistics (HES) (control only): History of stroke for the control patients
+\end{enumerate} 
+
+Data were retrieved for 388,506 emergency stroke admissions from an English LSOA, arriving at an acute stroke team in England between 01/11/2019 til 31/03/2023, obtained from SSNAP. SSNAP prospectively collects clinical data from 100\% of acute hospitals in England and Wales, with case ascertainment estimated at $>$90\% when compared with administrative coding data. Accounting for the framework used to transfer the SSNAP data to the NHSE SDE, features for the first 72 hours of the acute phase of the stroke pathway, up to and including any acute treatment (with thrombolysis and/or thrombectomy) are included (excluding data about hospital transfer and hospital attended).
+
+A control patient cohort dataset is created by matching a control patient (from the primary healthcare dataset) to each stroke patient on age (5 year age band), sex (male or female) and ethnicity (categorised using 5 categories: white; black, black British, African and Caribbean; mixed or multiple ethnic groups; Asian or British Asian; other ethnic group) as recorded in the demographic dataset. The control patients live in an English LSOA, is alive on the date their matched stroke patient had their stroke event (referred to onwards as the "date of event"), and does not have any history of stroke (recorded in the primary healthcare and HES dataset) prior to the date of event.
+
+For each patient (stroke and matched control), information was joined from the other data sources. Stroke patients have 52 features to describe their characteristics,  and the acute phase of the stroke pathway. Categorical features (such as ethnicity, covid status, treatment use/time, onset in hospital or arrival within 6 hours, stroke type, onset time type) are represented as one hot encoded features.
+
+Target features:\\
+Each analysis is applied to three separate target features. In the first year following the date of event, the number of days spent i) in care (inpatient in an NHS hospital bed), ii) at home (in a place of residence other than an inpatient in an NHS bed, so includes care homes), and iii) dead (calculated from the date of event, date of death and number of days spent at home, assuming any alive days not spent at home is spent as an inpatient in NHS care).
+
+Populations:\\
+The analysis in this paper uses 2 different populations of stroke patients, each created by applying different filters to the 388,506 emergency stroke admissions retrieved:
+\begin{enumerate}
+    \item The \emph{full exploratory population} of stroke patients (n = 388,347) have i) their stroke onset within 7 days of the arrival date range (excluded 133 patients), ii) their recorded procedures in the expected order of scan, then IVT, then MT (excluded 1 patient for scan after IVT, excluded 25 patients MT after IVT).
+    \item The \emph{matched population} of stroke patients (n = 236,632), in addition to the full exploratory population filters, also i) have a matched control patient from primary records (excluded 14 patients), ii) arrive at an acute stroke team in England from 01/11/2019 to remove survival bias for controls (excluded 144,551 patients), iii) have age recorded in SSNAP within 4 years of the age group recorded in the demographic dataset (excluded 3,731 patients), iv) have same sex recorded in SSNAP and demographics (excluded 3,419 patients).
+\end{enumerate}
+
+\subsection{Descriptive analysis (of impact of stroke on location)}
+
+Using descriptive analysis to compare the duration spent in each location (in care, at home, dead) during the year following the stroke event between stroke and matched control population, dividing the populations based on ethnicity (5 categories), age (under 60, 60-80, over 80), sex (male or female) and IMD quintile. Use the matched population of stroke and control patients.
+
+\subsection{Explainable machine learning models (to predict stroke patient location in the first year following their stroke)}
+
+We used a separate regression XGBoost model (using stratified 5-fold cross-validation) to predict each of the three location target features (the number of days spent in care, at home and dead during the year following the stroke event) for each stroke patient from their other feature values. Use the full exploratory population of stroke patients.
+
+\subsubsection{Feature selection}
+
+Features to be included in the prediction models were chosen based on four criteria: 1) identified as important to predict the outcome based on thrombolysis use \ref{pearn 2023}, 2) used to filter patients in the causal model, 3) features identified by stakeholders, and 4) results of the sequential forward feature selection (see
+supplementary material for full method description).
+
+\textbf{TO GO IN SUPPLEMENTARY MATERIAL:
+We use sequential forward feature selection to identify the features (from the 52 available features) to include in the model, with the motivation to create an explainable model with fewer features that still captured the majority of the accuracy. For each of the three location target features (in care, at home, dead) we trained XGBoost models on stratified 5-fold cross-validation data, sequentially selecting features to be included in the model as the single best feature to improve performance in terms of the R-squared. We repeated this process until model accuracy was equivalent (3 dp) to the model with all 52 features, or up to 25 features (whichever is greater).}
+
+\subsubsection{Model accuracy}
+
+Model accuracy (using stratified 5-fold cross-validation) is reported as R-squared (mean and standard deviation across 5 k-folds).
+
+\subsubsection{SHapley Additive exPlanation (SHAP) values}
+
+We sought to make our models explainable using SHAP values \cite{lundberg_unified_2017}. SHAP provides a measure of the contribution of each feature value to the final prediction (number of days spent in care/at home/dead for the year following a stroke for that individual) at the patient level. SHAP values are in the same units as the target feature: days. 
+Each XGBoost model has a SHAP baseline time in each location (which is common across all individual predictions) which is altered by the SHAP value for each feature for an individual, the sum of which is the final model prediction. A positive SHAP value represents that the corresponding feature value increases the predicted duration for that individual, whereas a negative SHAP value reduces the predicted duration. SHAP values can be assessed \textit{locally} at patient level, and \textit{globally} at patient cohort level to understand general patterns of how durations at each locations differs by patient types.
+
+\subsection{Survival analysis following stroke}
+
+Use Cox proportional hazard ratio regression model to identify the proportional effect of stroke patient characteristics on their duration of survival in the first year following a stroke. Features included are: age, sex, ethnicity, IMD, stroke severity, prior disability, stroke type, treatment received, and covid status (infection and/or vaccination). Use the full exploratory population and causal population of stroke patients.

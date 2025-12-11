@@ -1,0 +1,1282 @@
+\section{PERFORMANCE OF MODELS}
+%https://tableconvert.com/csv-to-latex
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Model & n features & kfold & r2 score & mae score & SHAP base value & Notebook \\ \hline
+        Causal in care & 6 & 0 & 0.064 & 19.970 & 20.6 & 032j \\ \hline
+        Causal in care & 6 & 1 & 0.081 & 20.005 & 22.7 & 032j \\ \hline
+        Causal in care & 6 & 2 & 0.076 & 19.970 & 24.3 & 032j \\ \hline
+        Causal in care & 6 & 3 & 0.065 & 20.020 & 20.7 & 032j \\ \hline
+        Causal in care & 6 & 4 & 0.062 & 19.923 & 21.6 & 032j \\ \hline
+        Causal at home & 6 & 0 & 0.337 & 77.178 & 269.7 & 032k \\ \hline
+        Causal at home & 6 & 1 & 0.338 & 78.228 & 267.0 & 032k \\ \hline
+        Causal at home & 6 & 2 & 0.342 & 77.759 & 274.4 & 032k \\ \hline
+        Causal at home & 6 & 3 & 0.338 & 78.535 & 259.6 & 032k \\ \hline
+        Causal at home & 6 & 4 & 0.328 & 78.267 & 275.7 & 032k \\ \hline
+        Causal at dead & 6 & 0 & 0.313 & 74.207 & 49.8 & 032l \\ \hline
+        Causal at dead & 6 & 1 & 0.315 & 73.221 & 68.2 & 032l \\ \hline
+        Causal at dead & 6 & 2 & 0.303 & 73.723 & 73.7 & 032l \\ \hline
+        Causal at dead & 6 & 3 & 0.305 & 74.010 & 71.7 & 032l \\ \hline
+        Causal at dead & 6 & 4 & 0.298 & 74.182 & 77.0 & 032l \\ \hline
+    \end{tabular}
+\end{table}
+
+\iffalse
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Model & n features & kfold & r2 score & mae score & SHAP base value & Notebook \\ \hline
+        Predict in care & 10 & 0 & 0.106 & 20.776 & 24.6 & 032m \\ \hline
+        Predict in care & 10 & 1 & 0.114 & 20.688 & 25.3 & 032m \\ \hline
+        Predict in care & 10 & 2 & 0.109 & 20.727 & 24.9 & 032m \\ \hline
+        Predict in care & 10 & 3 & 0.109 & 20.728 & 25.0 & 032m \\ \hline
+        Predict in care & 10 & 4 & 0.109 & 20.700 & 26.9 & 032m \\ \hline
+        Predict at home & 10 & 0 & 0.372 & 79.252 & 265.8 & 032n \\ \hline
+        Predict at home & 10 & 1 & 0.370 & 79.302 & 252.8 & 032n \\ \hline
+        Predict at home & 10 & 2 & 0.370 & 79.300 & 266.0 & 032n \\ \hline
+        Predict at home & 10 & 3 & 0.367 & 79.561 & 268.8 & 032n \\ \hline
+        Predict at home & 10 & 4 & 0.361 & 79.800 & 256.7 & 032n \\ \hline
+        Predict at dead & 10 & 0 & 0.339 & 76.125 & 63.5 & 032o \\ \hline
+        Predict at dead & 10 & 1 & 0.342 & 75.995 & 75.2 & 032o \\ \hline
+        Predict at dead & 10 & 2 & 0.334 & 76.407 & 76.3 & 032o \\ \hline
+        Predict at dead & 10 & 3 & 0.339 & 76.227 & 71.0 & 032o \\ \hline
+        Predict at dead & 10 & 4 & 0.330 & 76.542 & 84.6 & 032o \\ \hline
+    \end{tabular}
+\end{table}
+
+\fi
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Model & n features & kfold & r2 score & mae score & SHAP base value & Notebook \\ \hline
+        Predict in care & 12 & 0 & 0.117 & 20.538 & 25.1 & 032s \\ \hline
+        Predict in care & 12 & 1 & 0.127 & 20.413 & 25.9 & 032s \\ \hline
+        Predict in care & 12 & 2 & 0.118 & 20.506 & 24.1 & 032s \\ \hline
+        Predict in care & 12 & 3 & 0.122 & 20.474 & 25.3 & 032s \\ \hline
+        Predict in care & 12 & 4 & 0.121 & 20.442 & 26.3 & 032s \\ \hline
+        Predict at home & 12 & 0 & 0.384 & 78.080 & 268.4 & 032t \\ \hline
+        Predict at home & 12 & 1 & 0.382 & 78.211 & 248.6 & 032t \\ \hline
+        Predict at home & 12 & 2 & 0.381 & 78.044 & 267.8 & 032t \\ \hline
+        Predict at home & 12 & 3 & 0.380 & 78.371 & 274.6 & 032t \\ \hline
+        Predict at home & 12 & 4 & 0.374 & 78.553 & 259.4 & 032t \\ \hline
+        Predict at dead & 12 & 0 & 0.349 & 74.974 & 63.6 & 032u \\ \hline
+        Predict at dead & 12 & 1 & 0.353 & 74.875 & 70.9 & 032u \\ \hline
+        Predict at dead & 12 & 2 & 0.344 & 75.499 & 79.2 & 032u \\ \hline
+        Predict at dead & 12 & 3 & 0.350 & 75.120 & 72.0 & 032u \\ \hline
+        Predict at dead & 12 & 4 & 0.340 & 75.425 & 89.7 & 032u \\ \hline
+    \end{tabular}
+\end{table}
+
+\iffalse
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Model & n features & kfold & r2 score & mae score & SHAP base value & Notebook \\ \hline
+        Predict in care & 13 & 0 & 0.119 & 20.516 & 24.3 & 032p \\ \hline
+        Predict in care & 13 & 1 & 0.125 & 20.439 & 26.6 & 032p \\ \hline
+        Predict in care & 13 & 2 & 0.119 & 20.506 & 24.4 & 032p \\ \hline
+        Predict in care & 13 & 3 & 0.122 & 20.499 & 24.8 & 032p \\ \hline
+        Predict in care & 13 & 4 & 0.120 & 20.442 & 26.1 & 032p \\ \hline
+        Predict at home & 13 & 0 & 0.383 & 78.100 & 268.5 & 032q \\ \hline
+        Predict at home & 13 & 1 & 0.382 & 78.174 & 250.6 & 032q \\ \hline
+        Predict at home & 13 & 2 & 0.382 & 78.077 & 264.7 & 032q \\ \hline
+        Predict at home & 13 & 3 & 0.379 & 78.452 & 271.4 & 032q \\ \hline
+        Predict at home & 13 & 4 & 0.374 & 78.568 & 260.0 & 032q \\ \hline
+        Predict at dead & 13 & 0 & 0.347 & 75.086 & 62.7 & 032r \\ \hline
+        Predict at dead & 13 & 1 & 0.352 & 74.926 & 72.6 & 032r \\ \hline
+        Predict at dead & 13 & 2 & 0.344 & 75.499 & 80.4 & 032r \\ \hline
+        Predict at dead & 13 & 3 & 0.350 & 75.098 & 69.7 & 032r \\ \hline
+        Predict at dead & 13 & 4 & 0.339 & 75.505 & 92.6 & 032r \\ \hline
+    \end{tabular}
+\end{table}
+
+\fi
+\begin{landscape}
+\iffalse
+
+% ACUTE STROKE TREATMENT FROM CAUSAL AND PREDICTIVE MODELS (with 6 and 10 features)
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032j_xgboost_in_care_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032k_xgboost_at_home_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032l_xgboost_dead_acute_treatment_shap_violin_kfold0_reformat.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Causal in care (6 features) & e: Causal at home (6 features) & f: Causal dead (6 features)
+\end{tabular}
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 10 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the affect of acute stroke treatment on duration spent d: in care, e: at home, f: dead in the first year following a stroke (6 feature model).}
+\label{Fig:treatment 10 feature and causal model}
+\end{figure}
+
+\fi
+
+
+% ACUTE STROKE TREATMENT FROM CAUSAL AND PREDICTIVE MODELS (with 6 and 12 features)
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (12 features) & b: Predict at home (12 features) & c: Predict dead (12 features)
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032j_xgboost_in_care_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032k_xgboost_at_home_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032l_xgboost_dead_acute_treatment_shap_violin_kfold0_reformat.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Causal in care (6 features) & e: Causal at home (6 features) & f: Causal dead (6 features)
+\end{tabular}
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the affect of acute stroke treatment on duration spent d: in care, e: at home, f: dead in the first year following a stroke (6 feature model).}
+\label{Fig:treatment 12 feature and causal model}
+\end{figure}
+
+\iffalse
+
+
+% ACUTE STROKE TREATMENT FROM CAUSAL AND PREDICTIVE MODELS (with 6 and 13 features)
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features)
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032j_xgboost_in_care_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032k_xgboost_at_home_acute_treatment_shap_violin_kfold0_reformat.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032l_xgboost_dead_acute_treatment_shap_violin_kfold0_reformat.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Causal in care (6 features) & e: Causal at home (6 features) & f: Causal dead (6 features)
+\end{tabular}
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the affect of acute stroke treatment on duration spent d: in care, e: at home, f: dead in the first year following a stroke (6 feature model).}
+\label{Fig:treatment 13 feature and causal model}
+\end{figure}
+
+
+% SHAPS FROM JUST THE PREDICTIVE MODELS (10, 12 and 13 FEATURES)
+
+% #1 ACUTE STROKE TREATMENT
+% 10 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) &  c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 10 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:treatment 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of acute stroke treatment from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:treatment 13 and 12 feature models}
+\end{figure}
+
+
+
+
+% #2 COVID STATUS
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_shap_violin_covid status_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature covid status. Showing the contribution of covid status from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:covid status 10 feature models}
+\end{figure}
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_shap_violin_covid status_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_covid status_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature covid status. Showing the contribution of covid status from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of covid status from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:covid status 13 and 12 feature models}
+\end{figure}
+
+% #3 PRECISE ONSET KNOWN
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_precise_onset_known_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature precise onset known. Showing the contribution of precise onset known from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:precise onset known 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_precise_onset_known_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]
+{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_precise_onset_known_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature precise onset known. Showing the contribution of precise onset known from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of precise onset known from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:precise onset known 13 and 12 feature models}
+\end{figure}
+
+
+% #4 STROKE SEVERITY ARRIVAL
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_stroke_severity_arrival_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature stroke severity arrival. Showing the contribution of stroke severity arrival from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:stroke_severity_arrival 10 feature models}
+\end{figure}
+
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]
+{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_stroke_severity_arrival_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature stroke severity arrival. Showing the contribution of stroke severity arrival from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of stroke severity arrival from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:stroke severity arrival 13 and 12 feature models}
+\end{figure}
+
+
+% #5 DIABETES
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_diabetes_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature diabetes. Showing the contribution of diabetes from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:diabetes 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_diabetes_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_diabetes_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature diabetes. Showing the contribution of diabetes from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of diabetes from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:diabetes 13 and 12 feature models}
+\end{figure}
+
+% #6 ETHNICITY
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_shap_violin_ethnicity_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature ethnicity. Showing the contribution of ethnicity from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:ethnicity 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_shap_violin_ethnicity_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_ethnicity_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature ethnicity. Showing the contribution of aethnicity from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of ethnicity from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:ethnicity 13 and 12 feature models}
+\end{figure}
+
+% #7 PRIOR DISABILTY
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_prior_disability_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature prior disability. Showing the contribution of prior disability from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:prior disability 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_prior_disability_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_prior_disability_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature prior_disability. Showing the contribution of prior_disability from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of prior\_disability from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:prior_disability 13 and 12 feature models}
+\end{figure}
+
+% #8 IMD 2019 QUINTILES
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature IMD 2019 quintiles. Showing the contribution of IMD 2019 quintiles from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:imd 2019 quintiles 10 feature models}
+\end{figure}
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature IMD_2019_QUINTILES. Showing the contribution of IMD_2019_QUINTILES from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of IMD_2019_QUINTILES from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:IMD_2019_QUINTILES 13 and 12 feature models}
+\end{figure}
+
+% #9 AGE
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_age_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features) \end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature age. Showing the contribution of age from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:age 10 feature models}
+\end{figure}
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_age_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_age_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature age. Showing the contribution of age from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of age from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:age 13 and 12 feature models}
+\end{figure}
+
+
+% #10 ANY ATRIAL FIBRILATION DIAGNOSIS
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032m_xgboost_in_care_10_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032o_xgboost_dead_10_features_violin_shap_any_afib_diagnosis_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (10 features) & b: Predict at home (10 features) & c: Predict dead (10 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature any afib diagnosis. Showing the contribution of any afib diagnosis from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:any_afib_diagnosis 10 feature models}
+\end{figure}
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_any_afib_diagnosis_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature any\_afib\_diagnosis. Showing the contribution of any_afib_diagnosis from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of any\_afib\_diagnosis from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:any_afib_diagnosis 13 and 12 feature models}
+\end{figure}
+
+% #11 STROKE TYPE
+
+
+% 12 and 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_infarction_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_infarction_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature infarction. Showing the contribution of infarction from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of infarction from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:infarction 13 and 12 feature models}
+\end{figure}
+
+
+% #12 ONSET IN HOSPITAL & #13 ONSET TO ARRIVAL WITHIN 6 HOURS
+
+% 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_onset_in_hospital_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_onset_in_hospital_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_onset_in_hospital_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (13 features) & e: Predict at home (13 features)  & f: Predict dead (13 features)
+\end{tabular}
+\caption{Showing the contribution of feature onset in hospital from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of onset to arrival within 6 hours from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:onset in hospital and onset to arrival within 6 hours 13 feature models}
+\end{figure}
+
+
+% #12 ONSET IN HOSPITAL OR ONSET TO ARRIVAL WITHIN 6 HOURS
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (12 features) & b: Predict at home (12 features) & c: Predict dead (12 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature onset\_in\_hospital\_or\_arrival\_within\_6hrs. Showing the contribution of onset\_in\_hospital\_or\_arrival\_within\_6hrs from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:onset_in_hospital_or_arrival_within_6hrs 12 feature models}
+\end{figure}
+
+\fi
+
+% just models wtih 12 features
+
+
+
+% SHAPS FROM JUST THE PREDICTIVE MODELS 12 FEATURES
+
+% #1 ACUTE STROKE TREATMENT
+% 10 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (12 features) & b: Predict at home (12 features) &  c: Predict dead (12 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature acute stroke treatment. Showing the contribution of acute stroke treatment from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:treatment 12 feature models}
+\end{figure}
+
+
+
+% #2 COVID STATUS
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_covid status_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature covid status. Showing the contribution of covid status from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:covid status 12 feature models}
+\end{figure}
+
+% #3 PRECISE ONSET KNOWN
+
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]
+{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_precise_onset_known_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_precise_onset_known_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature precise onset known. Showing the contribution of precise onset known from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:precise onset known 12 feature models}
+\end{figure}
+
+
+% #4 STROKE SEVERITY ARRIVAL
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature stroke severity arrival. Showing the contribution of stroke severity arrival from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:stroke severity arrival 12 feature models}
+\end{figure}
+
+
+% #5 DIABETES
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_diabetes_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature diabetes. Showing the contribution of diabetes from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:diabetes 13 and 12 feature models}
+\end{figure}
+
+% #6 ETHNICITY
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_ethnicity_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature ethnicity. Showing the contribution of aethnicity from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:ethnicity 12 feature models}
+\end{figure}
+
+% #7 PRIOR DISABILTY
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_prior_disability_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature prior_disability. Showing the contribution of prior_disability from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:prior_disability 12 feature models}
+\end{figure}
+
+% #8 IMD 2019 QUINTILES
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature IMD_2019_QUINTILES. Showing the contribution of IMD_2019_QUINTILES from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:IMD_2019_QUINTILES 12 feature models}
+\end{figure}
+
+% #9 AGE
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_age_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature age. Showing the contribution of age from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:age 12 feature models}
+\end{figure}
+
+
+% #10 ANY ATRIAL FIBRILATION DIAGNOSIS
+
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature any\_afib\_diagnosis. Showing the contribution of any\_afib\_diagnosis from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:any_afib_diagnosis 12 feature models}
+\end{figure}
+
+% #11 STROKE TYPE
+
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_violin_shap_infarction_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_violin_shap_infarction_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (12 features) & e: Predict at home (12 features)  & f: Predict dead (12 features)
+\end{tabular}
+\caption{SHAP values for feature infarction. Showing the contribution of infarction from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:infarction 12 feature models}
+\end{figure}
+
+% #12 ONSET IN HOSPITAL OR ONSET TO ARRIVAL WITHIN 6 HOURS
+
+% 12 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032s_xgboost_in_care_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032t_xgboost_at_home_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032u_xgboost_dead_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (12 features) & b: Predict at home (12 features) & c: Predict dead (12 features)
+\end{tabular}
+\\[0.2cm]
+\caption{SHAP values for feature onset\_in\_hospital\_or\_arrival\_within\_6hrs. Showing the contribution of onset\_in\_hospital\_or\_arrival\_within\_6hrs from the 3 models predicting (from 12 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:onset_in_hospital_or_arrival_within_6hrs 12 feature models}
+\end{figure}
+
+
+% #12 ONSET IN HOSPITAL & #13 ONSET TO ARRIVAL WITHIN 6 HOURS
+
+% 13 features
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_onset_in_hospital_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_onset_in_hospital_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_onset_in_hospital_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& a: Predict in care (13 features) & b: Predict at home (13 features) & c: Predict dead (13 features) 
+\end{tabular}
+\\[0.2cm]
+\hspace*{0cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032p_xgboost_in_care_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032q_xgboost_at_home_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=75mm]{images/output_results_from_SDE/032r_xgboost_dead_13_features_violin_shap_onset_to_arrival_within_270mins_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{25mm} m{70mm} m{70mm} m{80mm}}
+& d: Predict in care (13 features) & e: Predict at home (13 features)  & f: Predict dead (13 features)
+\end{tabular}
+\caption{Showing the contribution of feature onset in hospital from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.  Showing the contribution of onset to arrival within 6 hours from the 3 models predicting (from 13 features) the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:onset in hospital and onset to arrival within 6 hours 13 feature models}
+\end{figure}
+
+
+% end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{landscape}
+\iffalse
+\section{SHAP descriptive statistics}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+        feature name & feature value & min & 1q & median & 3q & max & mean & sd & n (nearest 5) \\ \hline
+        stroke\_severity\_arrival & 0 & -18.49 & -10.08 & -8.58 & -6.24 & 20.01 & -7.89 & 3.13 & 7340 \\ \hline
+        stroke\_severity\_arrival & 1 & -22.06 & -13.11 & -11.70 & -9.82 & 3.08 & -11.21 & 2.79 & 7510 \\ \hline
+        stroke\_severity\_arrival & 2 & -19.62 & -11.34 & -9.77 & -7.49 & -0.19 & -9.32 & 2.83 & 9715 \\ \hline
+        stroke\_severity\_arrival & 3 & -25.93 & -9.32 & -7.77 & -5.72 & 9.17 & -7.55 & 2.67 & 8210 \\ \hline
+        stroke\_severity\_arrival & 4 & -14.65 & -6.24 & -4.21 & -2.06 & 6.00 & -4.16 & 2.91 & 6485 \\ \hline
+        stroke\_severity\_arrival & 5 & -12.62 & -4.37 & -2.28 & -0.13 & 4.28 & -2.38 & 2.74 & 5085 \\ \hline
+        stroke\_severity\_arrival & 6 & -14.77 & -1.84 & 0.72 & 2.22 & 5.04 & 0.15 & 2.66 & 4300 \\ \hline
+        stroke\_severity\_arrival & 7 & -13.08 & 0.93 & 3.39 & 4.47 & 13.86 & 2.62 & 2.52 & 3255 \\ \hline
+        stroke\_severity\_arrival & 8 & -8.93 & 4.25 & 5.86 & 7.53 & 21.80 & 5.64 & 2.44 & 2630 \\ \hline
+        stroke\_severity\_arrival & 9 & -14.53 & 5.46 & 7.31 & 8.85 & 16.58 & 7.03 & 2.41 & 2195 \\ \hline
+        stroke\_severity\_arrival & 10 & -15.26 & 6.87 & 8.65 & 10.47 & 20.01 & 8.53 & 2.47 & 1910 \\ \hline
+        stroke\_severity\_arrival & 11 & -8.86 & 7.26 & 8.97 & 11.08 & 20.26 & 8.93 & 2.69 & 1625 \\ \hline
+        stroke\_severity\_arrival & 12 & -18.73 & 8.67 & 11.27 & 13.86 & 27.64 & 11.20 & 3.51 & 1500 \\ \hline
+        stroke\_severity\_arrival & 13 & -22.17 & 8.83 & 11.75 & 15.73 & 31.72 & 12.10 & 4.32 & 1325 \\ \hline
+        stroke\_severity\_arrival & 14 & -3.39 & 9.54 & 12.91 & 16.56 & 26.06 & 13.11 & 4.52 & 1255 \\ \hline
+        stroke\_severity\_arrival & 15 & -12.08 & 9.15 & 13.62 & 16.60 & 30.12 & 13.33 & 5.03 & 1190 \\ \hline
+        stroke\_severity\_arrival & 16 & 0.90 & 9.84 & 14.27 & 18.22 & 32.32 & 14.38 & 5.39 & 1130 \\ \hline
+        stroke\_severity\_arrival & 17 & -2.19 & 7.98 & 12.54 & 16.88 & 31.57 & 12.81 & 5.74 & 1110 \\ \hline
+        stroke\_severity\_arrival & 18 & -0.61 & 8.11 & 12.44 & 17.43 & 40.45 & 13.26 & 6.31 & 1095 \\ \hline
+        stroke\_severity\_arrival & 19 & -20.42 & 7.37 & 12.08 & 16.79 & 50.10 & 12.47 & 6.45 & 1095 \\ \hline
+        stroke\_severity\_arrival & 20 & -2.83 & 6.47 & 11.18 & 16.01 & 46.43 & 12.04 & 6.99 & 945 \\ \hline
+        stroke\_severity\_arrival & 21 & -3.77 & 4.44 & 9.88 & 14.83 & 48.33 & 10.54 & 7.35 & 895 \\ \hline
+        stroke\_severity\_arrival & 22 & -0.50 & 4.66 & 10.68 & 15.68 & 49.97 & 11.61 & 8.89 & 820 \\ \hline
+        stroke\_severity\_arrival & 23 & -5.43 & 2.39 & 7.11 & 13.16 & 65.55 & 8.43 & 7.70 & 750 \\ \hline
+        stroke\_severity\_arrival & 24 & -4.38 & 1.08 & 5.72 & 11.56 & 38.64 & 7.07 & 7.39 & 685 \\ \hline
+        stroke\_severity\_arrival & 25 & -4.46 & 1.07 & 5.25 & 11.33 & 56.59 & 7.19 & 8.11 & 605 \\ \hline
+        stroke\_severity\_arrival & 26 & -17.00 & -2.62 & 0.59 & 6.40 & 44.91 & 2.90 & 7.92 & 530 \\ \hline
+        stroke\_severity\_arrival & 27 & -10.10 & -3.15 & 0.39 & 5.36 & 41.69 & 2.40 & 7.87 & 430 \\ \hline
+        stroke\_severity\_arrival & 28 & -9.65 & -4.83 & -1.50 & 4.17 & 75.57 & 1.15 & 9.65 & 360 \\ \hline
+        stroke\_severity\_arrival & 29 & -10.52 & -6.14 & -3.35 & 0.56 & 38.77 & -0.78 & 8.35 & 265 \\ \hline
+        stroke\_severity\_arrival & 30 & -15.94 & -10.23 & -8.10 & -3.87 & 41.68 & -5.74 & 7.81 & 215 \\ \hline
+        stroke\_severity\_arrival & 31 & -17.78 & -10.48 & -8.64 & -6.26 & 44.91 & -7.05 & 6.83 & 155 \\ \hline
+        stroke\_severity\_arrival & 32 & -13.73 & -10.87 & -8.50 & -3.21 & 25.28 & -5.90 & 7.67 & 150 \\ \hline
+        stroke\_severity\_arrival & 33 & -15.15 & -12.38 & -10.57 & -6.50 & 50.18 & -7.25 & 9.44 & 90 \\ \hline
+        stroke\_severity\_arrival & 34 & -20.25 & -15.52 & -13.82 & -10.83 & 25.58 & -10.70 & 9.22 & 90 \\ \hline
+        stroke\_severity\_arrival & 35 & -27.86 & -13.41 & -10.69 & -7.08 & 11.77 & -9.41 & 6.44 & 65 \\ \hline
+        stroke\_severity\_arrival & 36 & -17.71 & -14.39 & -12.96 & -9.43 & 30.32 & -9.27 & 9.82 & 65 \\ \hline
+        stroke\_severity\_arrival & 37 & -21.20 & -16.71 & -14.79 & -10.94 & 57.55 & -10.07 & 14.99 & 50 \\ \hline
+        stroke\_severity\_arrival & 38 & -19.45 & -16.95 & -15.29 & -13.71 & 27.16 & -14.18 & 6.34 & 60 \\ \hline
+        stroke\_severity\_arrival & 39 & -25.75 & -19.89 & -18.15 & -15.41 & -7.73 & -17.28 & 4.14 & 20 \\ \hline
+        stroke\_severity\_arrival & 40 & -23.34 & -19.38 & -17.96 & -14.20 & 7.40 & -16.28 & 5.09 & 65 \\ \hline
+        stroke\_severity\_arrival & 41 & -19.86 & -18.75 & -15.61 & -11.53 & 13.72 & -13.28 & 7.96 & 15 \\ \hline
+        stroke\_severity\_arrival & 42 & -24.51 & -15.64 & -13.82 & -10.14 & 87.36 & -10.52 & 12.90 & 95 \\ \hline
+        prior\_disability & 0 & -17.03 & -2.64 & -1.95 & -0.51 & 13.66 & -1.36 & 1.91 & 39085 \\ \hline
+        prior\_disability & 1 & -16.28 & -0.39 & 0.19 & 0.85 & 19.56 & 0.27 & 1.05 & 13875 \\ \hline
+        prior\_disability & 2 & -6.16 & 2.32 & 3.31 & 3.95 & 17.51 & 3.09 & 1.33 & 8760 \\ \hline
+        prior\_disability & 3 & -7.92 & 1.13 & 3.92 & 6.07 & 19.86 & 3.67 & 2.96 & 9660 \\ \hline
+        prior\_disability & 4 & -14.70 & -2.99 & 0.19 & 4.00 & 17.62 & 0.78 & 4.29 & 4725 \\ \hline
+        prior\_disability & 5 & -16.90 & -8.79 & -6.40 & -2.53 & 32.30 & -5.18 & 4.90 & 1270 \\ \hline
+        age & 0-29 & -20.27 & -6.39 & -2.07 & 1.72 & 57.33 & -0.99 & 10.20 & 310 \\ \hline
+        age & 30-59 & -12.93 & -1.79 & -0.58 & 1.46 & 78.54 & 0.84 & 5.22 & 11755 \\ \hline
+        age & 60 & -19.95 & -0.36 & 1.03 & 2.50 & 38.25 & 0.92 & 2.64 & 65315 \\ \hline
+        precise\_onset\_known & 0 & -10.04 & 0.62 & 0.75 & 0.91 & 4.55 & 0.77 & 0.31 & 52380 \\ \hline
+        precise\_onset\_known & 1 & -14.18 & -2.07 & -1.66 & -1.27 & 29.38 & -1.67 & 0.94 & 25005 \\ \hline
+        diabetes & 0 & -13.31 & -0.82 & -0.63 & -0.45 & 6.53 & -0.64 & 0.50 & 59790 \\ \hline
+        diabetes & 1 & -21.31 & 1.50 & 2.03 & 2.59 & 27.72 & 2.02 & 1.29 & 17595 \\ \hline
+        IMD\_2019\_QUINTILES & 1 & -12.78 & 0.31 & 0.79 & 1.15 & 16.30 & 0.65 & 1.07 & 15580 \\ \hline
+        IMD\_2019\_QUINTILES & 2 & -12.62 & 0.08 & 0.27 & 0.53 & 28.80 & 0.30 & 0.73 & 15335 \\ \hline
+        IMD\_2019\_QUINTILES & 3 & -10.30 & -0.20 & -0.02 & 0.14 & 12.99 & -0.01 & 0.53 & 16025 \\ \hline
+        IMD\_2019\_QUINTILES & 4 & -8.49 & -0.39 & -0.16 & 0.03 & 10.38 & -0.13 & 0.61 & 15590 \\ \hline
+        IMD\_2019\_QUINTILES & 5 & -10.34 & -0.86 & -0.60 & -0.28 & 28.32 & -0.55 & 0.87 & 14855 \\ \hline
+        any\_afib\_diagnosis & 0 & -11.36 & -0.34 & -0.19 & 0.01 & 5.34 & -0.17 & 0.46 & 58790 \\ \hline
+        any\_afib\_diagnosis & 1 & -9.93 & 0.14 & 0.60 & 0.99 & 9.98 & 0.54 & 0.73 & 18595 \\ \hline
+        eth5 & Asian or Asian British & -5.45 & 0.70 & 1.71 & 2.90 & 26.99 & 2.20 & 2.78 & 3770 \\ \hline
+        eth5 & Black, Black British, Caribbean or African & -3.58 & 7.10 & 8.94 & 11.00 & 63.47 & 9.82 & 4.80 & 2130 \\ \hline
+        eth5 & Mixed or multiple ethnic groups & -0.97 & 5.32 & 7.23 & 9.50 & 54.81 & 8.22 & 5.51 & 500 \\ \hline
+        eth5 & Other ethnic group & -4.11 & 2.49 & 3.65 & 5.06 & 22.87 & 4.29 & 3.21 & 715 \\ \hline
+        eth5 & White & -1.04 & 0.16 & 0.23 & 0.32 & 2.52 & 0.25 & 0.14 & 69830 \\ \hline
+        covid\_status & No\_inf\_no\_vacc & -3.79 & -0.25 & -0.17 & -0.06 & 5.34 & -0.17 & 0.20 & 49955 \\ \hline
+        covid\_status & No\_inf\_vacc & -10.92 & -1.67 & -1.26 & -0.98 & 9.78 & -1.33 & 0.72 & 25670 \\ \hline
+        covid\_status & inf\_no\_vacc & -5.53 & 0.71 & 2.37 & 4.71 & 22.06 & 3.08 & 4.05 & 685 \\ \hline
+        covid\_status & inf\_vacc & -10.74 & 3.31 & 4.45 & 5.88 & 34.35 & 4.80 & 2.90 & 1070 \\ \hline
+        Treatment\_time\_270\_both & None & -1.05 & 0.12 & 0.18 & 0.25 & 1.34 & 0.17 & 0.17 & 68185 \\ \hline
+        Treatment\_time\_270\_both & ivt\_mt\_over\_270mins & -15.12 & -5.33 & 1.03 & 4.44 & 47.63 & 2.57 & 13.02 & 45 \\ \hline
+        Treatment\_time\_270\_both & ivt\_mt\_under\_270mins & -11.08 & -4.21 & -1.69 & 1.05 & 22.68 & -0.96 & 4.79 & 385 \\ \hline
+        Treatment\_time\_270\_both & ivt\_under\_270mins\_mt\_over\_270mins & -2.52 & 4.51 & 7.26 & 11.23 & 36.12 & 8.50 & 5.87 & 385 \\ \hline
+        Treatment\_time\_270\_both & only\_ivt\_over\_270mins & -15.40 & -2.84 & -1.70 & -0.46 & 25.48 & -1.22 & 3.72 & 420 \\ \hline
+        Treatment\_time\_270\_both & only\_ivt\_under\_270mins & -16.10 & -2.39 & -1.29 & -0.49 & 16.50 & -1.38 & 1.46 & 7220 \\ \hline
+        Treatment\_time\_270\_both & only\_mt\_over\_270mins & -9.51 & 4.29 & 6.89 & 10.98 & 73.21 & 8.48 & 7.29 & 555 \\ \hline
+        Treatment\_time\_270\_both & only\_mt\_under\_270mins & -8.05 & 0.33 & 3.57 & 8.44 & 33.83 & 4.99 & 6.68 & 190 \\ \hline
+    \end{tabular}
+    \caption{Descriptive statistics for all 10 input features for XGBoost model to predict duration spent at home (notebook 032n) for kfold 0}
+\end{table}
+
+\fi
+
+\begin{comment}
+
+\begin{figure}[!htb]
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image1_1row.png}%
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image2_1row.png}%
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image3_1row.png}
+\\[-0.7cm]
+\begin{tabular}{m{13mm} m{49mm} m{49mm} m{1mm}}
+& (a) & (b) & (c)
+\end{tabular}
+\\[-0.5cm]
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image4_2row.png}%
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image5_2row.png}%
+\hspace*{-1cm}
+\includegraphics[width=62mm]{image6_3row.png}
+\\[-0.7cm]
+\begin{tabular}{m{13mm} m{49mm} m{49mm} m{1mm}}
+& (d) & (e) & (f)
+\end{tabular}
+\caption[Short caption for table of figures]{Longer caption explaining each image from (a) to (f).}
+\label{Fig:6_images}
+\end{figure}
+
+
+
+\begin{figure}
+
+\centering
+\subfloat[A]{\includegraphics[width=3cm]{example-image-a}}\hfil
+\subfloat[B]{\includegraphics[width=3cm]{example-image-b}}\hfil 
+\subfloat[C]{\includegraphics[width=3cm]{example-image-c}} 
+
+\subfloat[D]{\includegraphics[width=3cm]{example-image-a}}\hfil   
+\subfloat[E]{\includegraphics[width=3cm]{example-image-b}}\hfil
+\subfloat[F]{\includegraphics[width=3cm]{example-image-c}}
+\caption{Many figures}\label{figure}
+\end{figure}
+
+
+
+
+\begin{figure}[t!] % "[t!]" placement specifier just for this example
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic1.pdf}
+\caption{First subfigure} \label{fig:a}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic2.pdf}
+\caption{Second subfigure} \label{fig:b}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic3.pdf}
+\caption{Third subfigure} \label{fig:c}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic4.pdf}
+\caption{Fourth subfigure} \label{fig:d}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic5.pdf}
+\caption{Fifth subfigure} \label{fig:e}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{pic6.pdf}
+\caption{Sixth subfigure} \label{fig:f}
+\end{subfigure}
+
+\caption{My complicated figure} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}
+
+\centering
+\subfloat[A]{\includegraphics[width=2cm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}}}\hfil
+\subfloat[B]{\includegraphics[width=2cm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}}\hfil 
+\subfloat[C]{\includegraphics[width=2cm]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}} 
+
+\subfloat[D]{\includegraphics[width=3cm]{example-image-a}}\hfil   
+\subfloat[E]{\includegraphics[width=3cm]{example-image-b}}\hfil
+\subfloat[F]{\includegraphics[width=3cm]{example-image-c}}
+\caption{Many figures}\label{figure}
+\end{figure}
+
+
+\begin{figure}[t!] % "[t!]" placement specifier just for this example
+
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Causal affect on duration in care (notebook 032j)} 
+        \label{causal in care}
+    \end{subfigure}
+    \hfil%space*{\fill}
+    
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Causal affect on duration at home (notebook 032k)} 
+        \label{causal at home}
+    \end{subfigure}\hspace*{\fill}
+
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Causal affect on duration dead (notebook 032l)} 
+        \label{causal dead}
+    \end{subfigure}
+
+    \medskip
+
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Contribution to predict duration in care (notebook 032m)} 
+        \label{predict in care}
+    \end{subfigure}\hspace*{\fill}
+    
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Contribution to predict duration at home (notebook 032n} 
+        \label{predict at home}
+    \end{subfigure}\hspace*{\fill}
+
+    \begin{subfigure}{0.31\textwidth}
+        \includegraphics[width=\linewidth]{images/output_results_from_SDE/032n_xgboost_at_home_10_features_shap_violin_acute treatment time_kfold0.jpg}
+        \caption{Contribution to predict duration dead (notebook 032o)} 
+        \label{predict dead}
+    \end{subfigure}
+    
+    \caption{Acute stroke treatment} \label{acute stroke treatment violins}
+
+\end{figure}
+
+%A cross-reference to Figure~\ref{fig:1}, and a cross-reference to Subfigure~\ref{fig:e}.
+
+\end{comment}
+
+%\end{landscape}

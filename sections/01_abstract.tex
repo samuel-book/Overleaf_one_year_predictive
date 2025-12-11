@@ -1,0 +1,53 @@
+\section*{Abstract}
+
+\textit{Introduction}: This study examines the affect of a patient in England having a stroke on the use of healthcare resources (in terms of number of days spent in care, at home or dead) for the year following their stroke by examining datasets stored in the NHS secured data environment.
+
+\textit{Patients and methods}: A total of 388,506 stroke patients who attended one of the emergency stroke hospitals in England from November 2019 to March 2023 were matched (by age, sex, ethnicity) to a control patient that did not have a stroke. We used descriptive statistics to analyse the impact a stroke had on the use of a hospital bed in the year following a stroke, and explainable machine learning (XGBoost with SHAP) to examine the effect of patient characteristics, covid status (infection and vaccination) and use/time of acute stroke treatmnet (thrombolysis and thrombectomy) on the patients’ predicted number of days spent in care, at home and dead. We predicted the expected effect of a stroke for the ?? patients in the test population (25\% of study population). We also used survival analysis (Kaplan-Meier and Cox proportional hazard ratio regression) to assess the contribution of features on the patients likely duration of survival following a stroke.
+
+\textit{Results}: NEED TO UPDATE ALL OF THIS PARAGRAPH. 44\% of the test population received thrombolysis. 60\% of the test population were predicted to benefit from thrombolysis (improved probability-weighted mRS and reduced probability of mRS 5-6). Of those treated, 73\% were predicted to have a better outcome with thrombolysis, and of those not treated, 49\% were predicted to have a better outcome with thrombolysis. Patients with mismatched treatment decisions (actual thrombolysis use vs. predicted to benefit) can not be identified from an isolated feature value. Individual hospitals vary in balancing maximising benefit from thrombolysis vs. avoiding any possible harm.
+
+\textit{Discussion and Conclusion}: NEED TO UPDATE ALL OF THIS PARAGRAPH. Our results demonstrate that selecting the patients most likely to benefit from thrombolysis is complicated, and there remains substantial between-hospital variation in trade-offs between maximising benefit and avoiding any possible harm. This demonstrates the potential of applying explainable machine learning to observational data to extend understanding of stroke treatment outcomes, and to identify patients that would benefit from the opposite thrombolysis decision.
+
+\section*{Plain English Summary}
+
+\textbf{What is the problem?} Strokes can leave patients with a high level of disability following a stroke.
+
+\textbf{What did we know?} We knew that stroke patients use ??? healthcare resources post stroke and that this is expected to increase with our aging population.
+
+\textbf{What did we not know?} A national analysis in the UK of the use of healthcare resources following a stroke as yet to be carried out. We also did not know which characteristics contributes to which patients would likely spend more time in healthcare (or at home, or die sooner).
+
+\textbf{What did we do?} We used survival analysis to examine hazard ratios, and explainable machine learning to learn what contributes to more healthcare resources post stroke.
+
+\textbf{What did we find out?} We found that patients are having their strokes younger in the more deprived regions. Once age is accounted for, patients die earlier in the deprived regions, and use ??less/more?? healthcare resources post stroke. We found that that more healthcare is being used by: LIST CHARACTERISTICS. We found that a recent covid infection increases the use of healthcare resources post stroke, and that being vaccinated against covid reduces this impact.
+
+Stroke severity, pre-existing health status, age, and use/time of reperfusion treatment are the key factors affecting outcome after stroke (death, and time at home or in care after stroke). Faster delivery of clot-busting medications (thrombolysis) and mechanical clot removal (thrombectomy) significantly improved patients' chances of returning home and surviving. This reinforces the critical importance of rapid medical response to stroke.
+
+Post-treatment complications from thrombolysis, especially brain hemorrhage, also emerged as a negative predictor for both survival and home time, highlighting the delicate risk-benefit calculations in treatment decisions.
+
+While we can see population-level influences, individual outcomes are harder to predict.
+
+These findings emphasize several actionable insights:
+
+* Stroke severity, pre-existing health status, and age will always strongly affect outcome after stroke
+* Rapid treatment with thrombolysis and/or thrombectomy improves outcomes for patients; There is a critical need to recognise the importance of speed of action and treatment after stroke.
+* There is a need to understand and consider treatment risk-benefit tradeoffs
+* The reality is that that significant uncertainty remains in individual recovery journeys
+
+
+
+SECTIONS
+
+
+title page
+keywords
+structured abstract (Introduction, Patients and methods, Results, Discussion and Conclusion.)
+introduction
+patients and methods
+results
+discussion(including limitations as appropriate)
+conclusion
+acknowledgements
+declarations
+references
+up to 6 tables or figures.
+

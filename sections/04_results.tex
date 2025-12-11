@@ -1,0 +1,566 @@
+\newpage
+\section{Results}
+
+
+The SDE restricts results to be exported to the nearest 5 count, and suppressing all counts under 10.
+
+% guidlines for creating a table 1 for clinical and epidemiologic studies (provides insights on threats to internal validity in the traditional epidemiologic frameorkd (confounders, selection bias, measurement error) https://pmc.ncbi.nlm.nih.gov/articles/PMC6773463/#:~:text=1%2C2,%2C%20and%20c)%20measurement%20error.
+
+\subsection{Description of the stroke and matched control populations}
+
+There are 236,630 instances in each of the matched populations (stroke and control populations). Table \ref{tab:stroke_control_011} shows the descriptive statistics of the main features.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        ~ & \bf Stroke & \bf Control \\ \hline
+        n & 236630 & 236630 \\ \hline
+        \bf Sex & ~ & ~ \\  \hline
+        Female & 110595 & 110595 \\ \hline
+        Male & 126035 & 126035 \\ \hline
+        \bf Age, years & ~ & ~ \\ \hline
+        0-20 & 130 & 240 \\ \hline
+        20-40 & 4460 & 5660 \\ \hline
+        40-60 & 36915 & 42565 \\ \hline
+        60-80 & 109170 & 116220 \\ \hline
+        80+ & 85950 & 71945 \\ \hline
+        Mean [std] & 74 [13.7] & 71 [13.8] \\ \hline        \bf IMD quintiles (2019) & ~ & ~ \\ \hline
+        1 & 48050 & 36155 \\ \hline
+        2 & 46820 & 43155 \\ \hline
+        3 & 48305 & 49680 \\ \hline
+        4 & 48210 & 53355 \\ \hline
+        5 & 45250 & 54285 \\ \hline
+        \bf Ethnicity & ~ & ~ \\ \hline
+        White & 213240 & 213240 \\ \hline
+        Asian or Asian British & 12160 & 12160 \\ \hline
+        Black, Black British, Caribbean or African & 6545 & 6545 \\ \hline
+        Other ethnic group & 2085 & 2085 \\ \hline
+        Mixed or multiple ethnic groups & 1645 & 1645 \\ \hline
+        Unknown & 955 & 955 \\ \hline
+        \bf Covid & ~ & ~ \\ \hline
+        Infection only & 3445 & 415 \\ \hline
+        Vaccination only & 124965 & 128500 \\ \hline
+        Vaccination and infection & 5105 & 1210 \\ \hline
+        None & 103115 & 106510 \\ \hline
+        \bf Region & ~ & ~ \\ \hline
+        South East & 35680 & 41125 \\ \hline
+        North West & 35295 & 30705 \\ \hline
+        South West & 29145 & 27435 \\ \hline
+        East of England & 26160 & 27965 \\ \hline
+        Yorkshire and The Humber & 24880 & 23055 \\ \hline
+        West Midlands & 24275 & 25085 \\ \hline
+        London & 24055 & 28605 \\ \hline
+        East Midlands & 22390 & 21120 \\ \hline
+        North East & 14750 & 11535 \\ \hline
+        \bf Rural/urban (2011) & ~ & ~ \\ \hline
+        Urban & 188895 & 185025 \\ \hline
+        Rural & 47740 & 51605 \\ \hline
+    \end{tabular}
+    \caption{Descriptive statistics of the main features for the 236,630 instances in the stroke and control populations. Counts to the nearest 5.}
+    \label{tab:stroke_control_011}
+\end{table}
+
+
+\subsection{Descriptive analysis (of impact of stroke on location)}
+
+Figure \ref{fig:violin_location_365_days_post_stroke} shows that in the year following a stroke, stroke patients spend, on average (mean), 266.4 days at home (138.6 standard deviation), 23.2 days in care (32.7 standard deviation) and 75.5 days dead (135.7 standard deviation). This is in comparison to the matched control population spending, on average (mean), 352.8 days at home (50.8 standard deviation), 2.4 days in care (10.2 standard deviation) and 9.8 days dead (48.0 standard deviation). When comparing individual matched patients, stroke patients spend, on average (mean), 86.4 days less at home (143.5 standard deviation), 20.8 more days in care (34.1 standard deviation), and die 65.7 days sooner (140.5 standard deviation). 
+%ccu085_041_violinplot_365_days_post_stroke.png
+\begin{figure}[ht]
+\centering
+ {\includegraphics[width = 6.1in]{./images/output_results_from_SDE/ccu085_012_population_all_violinplot_365_days_post_stroke.png}}\\
+ \caption{For the 365 days following a stroke event, the distribution of the number of days the stroke patient population, and their matched control population, spent in each location. LHS: Number of days spent at home. Left middle: Number of days spent in care. Right middle: Number of days dead. RHS: Additional days the stroke patient spent in comparison to their matched control.}
+ \label{fig:violin_location_365_days_post_stroke}
+\end{figure}
+
+Table \ref{tab:stroke_location_post_stroke} shows that patients that have had a stroke use more healthcare resources in the year following their stroke if they are older, live in a more deprived area, have a more severe stroke, have a haemorrhage (rather than an ischaemic) stroke, or are Black, Black British, Caribbean or African. A stroke patient dies sooner if they are older, female, with unknown ethnicity, live in a less deprived area, or have a more severe stroke.
+
+\newpage
+\begin{landscape}
+\begin{table}[!ht]
+    \small
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+        \multicolumn{2}{|c|}{\bf Population cohort} & \bf Count & \multicolumn{3}{|c|}{\bf At home} & \multicolumn{3}{|c|}{\bf In care} & \multicolumn{3}{|c|}{\bf Dead}\\ \hline
+        \bf Feature name & \bf Feature value & \bf (nearest 5) & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median \\ \hline
+        \multicolumn{2}{|l|}{\bf Whole population} & 236630 & 266.4 & 138.6 & 346.5 & 23.2 & 32.7 & 10.0 & 75.5 & 135.7 & 0.0 \\ \hline
+        \multirow{3}{*}{\bf Age (years)} & \bf under 60 & 109170 & 286.7 & 124.9 & 352.0 & 22.6 & 33.4 & 8.5 & 55.6 & 121.1 & 0.0 \\ \cline{2-3}
+        & \bf 60-80 & 85950 & 212.2 & 155.8 & 305.0 & 25.7 & 29.1 & 15.0 & 127.2 & 156.5 & 0.0 \\ \cline{2-3}
+        & \bf over 80 & 41510 & 325.1 & 86.5 & 359.0 & 19.5 & 37.0 & 5.5 & 20.4 & 78.4 & 0.0 \\ \hline
+        \multirow{2}{*}{\bf Sex} & \bf Female & 110595 & 253.4 & 144.7 & 339.5 & 23.7 & 31.3 & 11.0 & 87.9 & 143.3 & 0.0 \\ \cline{2-3}
+        & \bf Male & 126035 & 277.8 & 131.9 & 351.0 & 22.7 & 33.8 & 9.0 & 64.5 & 127.7 & 0.0 \\ \hline
+        \multirow{6}{*}{\bf Ethnicity} & \bf Asian or Asian British & 12160 & 290.4 & 121.4 & 351.5 & 22.8 & 33.3 & 9.5 & 51.8 & 117.3 & 0.0 \\ \cline{2-3}
+        & \bf Black, Black British, Caribbean or African & 6545 & 287.0 & 118.7 & 346.0 & 30.5 & 43.4 & 13.5 & 47.5 & 112.1 & 0.0 \\ \cline{2-3}
+        & \bf Mixed or multiple ethnic groups & 1645 & 285.3 & 122.8 & 349.0 & 27.2 & 37.9 & 11.0 & 52.6 & 116.9 & 0.0 \\ \cline{2-3}
+        & \bf Other ethnic group & 2085 & 281.9 & 127.6 & 350.8 & 25.3 & 37.5 & 10.0 & 57.8 & 123.2 & 0.0 \\ \cline{2-3}
+        & \bf Unknown & 955 & 206.3 & 167.4 & 319.0 & 18.1 & 26.5 & 6.0 & 140.8 & 166.6 & 0.0 \\ \cline{2-3}
+        & \bf White & 213240 & 264.4 & 139.8 & 346.0 & 23.0 & 32.1 & 10.0 & 77.7 & 137.2 & 0.0 \\ \hline
+        \multirow{5}{*}{\bf IMD} & \bf 1 & 48050 & 271.3 & 134.3 & 346.5 & 24.4 & 34.2 & 10.5 & 69.4 & 131.1 & 0.0 \\ \cline{2-3}
+        & \bf 2 & 46820 & 267.5 & 137.3 & 346.0 & 23.9 & 33.7 & 10.0 & 73.6 & 134.4 & 0.0 \\ \cline{2-3}
+        & \bf 3 & 48305 & 265.8 & 139.1 & 346.5 & 23.0 & 32.6 & 10.0 & 76.2 & 136.3 & 0.0 \\ \cline{2-3}
+        & \bf 4 & 48210 & 263.7 & 140.7 & 346.5 & 22.6 & 31.8 & 9.5 & 78.7 & 138.0 & 0.0 \\ \cline{2-3}
+        & \bf 5 & 45250 & 263.5 & 141.3 & 347.0 & 22.0 & 30.8 & 9.0 & 79.5 & 138.6 & 0.0 \\ \hline
+        \multirow{4}{*}{\bf COVID} & \bf Infection only & 3445 & 221.6 & 153.6 & 312.0 & 32.0 & 39.3 & 18.0 & 111.4 & 155.2 & 0.0 \\ \cline{2-3}
+        & \bf None & 103115 & 268.7 & 137.7 & 347.5 & 22.1 & 31.2 & 9.5 & 74.2 & 135.0 & 0.0 \\ \cline{2-3}
+        & \bf Vaccination and infection & 5105 & 233.4 & 147.4 & 317.0 & 33.4 & 39.7 & 19.0 & 98.2 & 146.8 & 0.0 \\ \cline{2-3}
+        & \bf Vaccination only & 124965 & 267.0 & 138.1 & 347.0 & 23.4 & 33.2 & 10.0 & 74.6 & 135.1 & 0.0 \\ \hline
+        \multirow{8}{*}{\bf Region} & \bf East Midlands & 22390 & 268.0 & 138.1 & 346.5 & 21.8 & 29.2 & 10.0 & 75.3 & 135.7 & 0.0 \\ \cline{2-3}
+        & \bf East of England & 26160 & 265.2 & 140.5 & 348.0 & 21.2 & 29.5 & 10.0 & 78.6 & 137.4 & 0.0 \\ \cline{2-3}
+        & \ bf London & 24055 & 275.7 & 130.5 & 346.0 & 26.5 & 37.1 & 12.0 & 62.9 & 125.8 & 0.0 \\ \cline{2-3}
+        & \bf North East & 14750 & 268.6 & 138.4 & 348.0 & 21.8 & 32.2 & 8.5 & 74.7 & 135.4 & 0.0 \\ \cline{2-3}
+        & \bf North West & 35295 & 263.2 & 139.1 & 343.5 & 25.4 & 34.8 & 11.0 & 76.4 & 136.2 & 0.0 \\ \hline
+        & \bf South East & 35680 & 266.4 & 138.6 & 347.5 & 22.9 & 32.7 & 9.5 & 75.7 & 136.1 & 0.0 \\ \hline
+        & \bf South West & 29145 & 258.0 & 142.6 & 342.0 & 24.3 & 33.7 & 10.0 & 82.8 & 140.8 & 0.0 \\ \hline
+        & \bf West Midlands & 24275 & 269.0 & 138.0 & 349.0 & 21.5 & 30.1 & 9.0 & 74.5 & 135.5 & 0.0 \\ \hline
+        & \bf Yorkshire and The Humber & 24880 & 267.7 & 138.8 & 349.0 & 21.9 & 31.9 & 9.0 & 75.5 & 135.7 & 0.0 \\ \cline{2-3}
+        \multirow{2}{*}{\bf Rurality} & \bf Rural & 47740 & 264.1 & 140.8 & 347.0 & 22.0 & 31.4 & 9.0 & 78.9 & 138.4 & 0.0 \\ \cline{2-3}
+        & \bf Urban & 188895 & 267.0 & 138.0 & 346.0 & 23.5 & 33.0 & 10.0 & 74.6 & 135.0 & 0.0 \\ \hline
+    \end{tabular}
+    \caption{Number of days in the year following the stroke event the stroke population spent in care, at home, or dead.}
+    \label{tab:stroke_location_post_stroke}
+\end{table}
+
+\newpage
+%\begin{landscape}
+\begin{table}[!ht]
+    \small
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+        \multicolumn{2}{|c|}{\bf Population cohort} & \bf Count & \multicolumn{3}{|c|}{\bf At home} & \multicolumn{3}{|c|}{\bf In care} & \multicolumn{3}{|c|}{\bf Dead}\\ \hline
+        \bf Feature name & \bf Feature value & \bf (nearest 5) & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median \\ \hline
+        \multicolumn{2}{|l|}{\bf Whole population} & 236630 & 352.8 & 50.8 & 365.0 & 2.4 & 10.2 & 0.0 & 9.8 & 48.0 & 0.0 \\ \hline
+        \multirow{3}{*}{\bf Age (years)} & \bf under 60 & 109170 & 359.3 & 33.8 & 365.0 & 1.6 & 8.6 & 0.0 & 4.1 & 31.3 & 0.0 \\\cline{2-3}
+        & \bf 60-80 & 85950 & 339.2 & 72.5 & 365.0 & 4.5 & 13.1 & 0.0 & 21.3 & 69.3 & 0.0 \\\cline{2-3}
+        & \bf over 80 & 41510 & 363.8 & 14.5 & 365.0 & 0.5 & 5.3 & 0.0 & 0.7 & 12.9 & 0.0 \\ \hline
+        \multirow{2}{*}{\bf Sex} & \bf Female & 110595 & 351.3 & 53.6 & 365.0 & 2.7 & 10.4 & 0.0 & 11.0 & 51.0 & 0.0 \\\cline{2-3}
+        & \bf Male & 126035 & 354.1 & 48.2 & 365.0 & 2.2 & 10.0 & 0.0 & 8.7 & 45.3 & 0.0 \\ \hline
+        \multirow{6}{*}{\bf Ethnicity} & \bf Asian or Asian British & 12160 & 359.2 & 35.5 & 365.0 & 1.4 & 7.2 & 0.0 & 4.4 & 33.6 & 0.0 \\\cline{2-3}
+        & \bf Black, Black British, Caribbean or African & 6545 & 359.4 & 34.6 & 365.0 & 1.4 & 8.3 & 0.0 & 4.2 & 32.2 & 0.0 \\\cline{2-3}
+        & \bf Mixed or multiple ethnic groups & 1645 & 357.5 & 39.7 & 365.0 & 1.7 & 7.8 & 0.0 & 5.9 & 37.3 & 0.0 \\\cline{2-3}
+        & \bf Other ethnic group & 2085 & 357.5 & 41.8 & 365.0 & 1.5 & 8.3 & 0.0 & 6.0 & 39.5 & 0.0 \\\cline{2-3}
+        & \bf Unknown & 955 & 358.4 & 41.7 & 365.0 & 0.3 & 3.0 & 0.0 & 6.3 & 40.8 & 0.0 \\\cline{2-3}
+        & \bf White & 213240 & 352.1 & 52.1 & 365.0 & 2.6 & 10.4 & 0.0 & 10.3 & 49.3 & 0.0 \\ \hline
+        \multirow{5}{*}{\bf IMD} & \bf 1 & 36155 & 350.6 & 55.6 & 365.0 & 2.7 & 10.6 & 0.0 & 11.7 & 52.6 & 0.0 \\\cline{2-3}
+        & \bf 2 & 43155 & 352.2 & 52.3 & 365.0 & 2.6 & 10.7 & 0.0 & 10.3 & 49.4 & 0.0 \\\cline{2-3}
+        & \bf 3 & 49680 & 353.0 & 50.3 & 365.0 & 2.4 & 10.1 & 0.0 & 9.6 & 47.6 & 0.0 \\\cline{2-3}
+        & \bf 4 & 53355 & 353.3 & 49.4 & 365.0 & 2.4 & 10.3 & 0.0 & 9.3 & 46.7 & 0.0 \\\cline{2-3}
+        & \bf 5 & 54285 & 354.1 & 47.9 & 365.0 & 2.2 & 9.6 & 0.0 & 8.7 & 45.3 & 0.0 \\ \hline
+        \multirow{4}{*}{\bf COVID} & \bf Infection only & 415 & 293.2 & 130.8 & 364.5 & 7.9 & 18.9 & 0.0 & 63.9 & 127.8 & 0.0 \\\cline{2-3}
+        & \bf None & 106510 & 353.7 & 49.2 & 365.0 & 2.1 & 9.5 & 0.0 & 9.2 & 46.7 & 0.0 \\\cline{2-3}
+        & \bf Vaccination and infection & 1210 & 328.1 & 91.7 & 365.0 & 6.6 & 20.5 & 0.0 & 30.3 & 86.4 & 0.0 \\\cline{2-3}
+        & \bf Vaccination only & 128500 & 352.4 & 50.9 & 365.0 & 2.7 & 10.5 & 0.0 & 9.9 & 48.0 & 0.0 \\ \hline
+        \multirow{9}{*}{\bf Region} & \bf East Midlands & 21120 & 352.8 & 50.4 & 365.0 & 2.4 & 9.2 & 0.0 & 9.9 & 47.9 & 0.0 \\\cline{2-3}
+        & \bf East of England & 27965 & 353.2 & 49.6 & 365.0 & 2.4 & 9.9 & 0.0 & 9.4 & 46.9 & 0.0 \\\cline{2-3}
+        & \bf London & 28605 & 354.9 & 46.6 & 365.0 & 2.2 & 9.5 & 0.0 & 8.0 & 43.7 & 0.0 \\\cline{2-3}
+        & \bf North East & 11535 & 351.9 & 52.8 & 365.0 & 2.5 & 9.5 & 0.0 & 10.6 & 50.2 & 0.0 \\\cline{2-3}
+        & \bf North West & 30705 & 352.2 & 51.9 & 365.0 & 2.8 & 11.8 & 0.0 & 10.0 & 48.6 & 0.0 \\\cline{2-3}
+        & \bf South East & 41125 & 353.0 & 50.6 & 365.0 & 2.3 & 9.9 & 0.0 & 9.7 & 47.9 & 0.0 \\\cline{2-3}
+        & \bf South West & 27435 & 352.1 & 52.3 & 365.0 & 2.6 & 11.3 & 0.0 & 10.3 & 49.5 & 0.0 \\\cline{2-3}
+        & \bf West Midlands & 25085 & 352.4 & 51.5 & 365.0 & 2.5 & 9.9 & 0.0 & 10.1 & 48.7 & 0.0 \\\cline{2-3}
+        & \bf Yorkshire and The Humber & 23055 & 352.0 & 52.9 & 365.0 & 2.3 & 9.6 & 0.0 & 10.7 & 50.3 & 0.0 \\ \hline
+        \multirow{2}{*}{\bf Rurality} & \bf Rural & 51605 & 353.4 & 49.9 & 365.0 & 2.3 & 10.2 & 0.0 & 9.3 & 47.2 & 0.0 \\\cline{2-3}
+        & \bf Urban & 185025 & 352.6 & 51.1 & 365.0 & 2.5 & 10.2 & 0.0 & 9.9 & 48.3 & 0.0 \\ \hline
+    \end{tabular}
+    \caption{Number of days in the year following the stroke event the control population spent in care, at home, or dead.}
+    \label{tab:control_location_post_stroke}
+\end{table}
+
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+        \multicolumn{2}{|c|}{\bf Population cohort} & \thread{\multirow{2}{|c|}{\bf Count\\(nearest 5)}} & \multicolumn{3}{|c|}{\bf At home} & \multicolumn{3}{|c|}{\bf In care} & \multicolumn{3}{|c|}{\bf Dead}\\ \hline
+        \multicolumn{2}{|c|}{} & ~ & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median & \bf mean & \bf std & \bf median \\ \hline
+        \multicolumn{2}{|l|}{\bf Whole population} & 236630 & -86.4 & 143.5 & -15.5 & 20.8 & 34.1 & 8.5 & 65.7 & 140.5 & 0 \\ \hline
+        \bf Feature name & \bf Feature value & & & & & & & & & & \\ \hline
+        \multirow{3}{*}{\bf Age (years)} & \bf under 60  & 109170 & -72.6 & 128.9 & -11.5 & 21.1 & 34.5 & 8.0 & 51.5 & 124.7 & 0 \\ \cline{2-3}
+        ~ & \bf 60-80 & 85950 & -127.1 & 169.8 & -48.0 & 21.2 & 31.9 & 12.5 & 105.9 & 169.2 & 0 \\ \cline{2-3}
+        ~ & \bf over 80 & 41510 & -38.7 & 87.8 & -6.0 & 19.0 & 37.4 & 5.0 & 19.7 & 79.6 & 0 \\ \hline
+        \multirow{2}{*}{\bf Sex} & \bf Female & 110595 & -97.9 & 150.1 & -21.5 & 21.1 & 32.8 & 10.0 & 76.9 & 148.5 & 0 \\ \cline{2-3}
+        ~ & \bf Male & 126035 & -76.3 & 136.6 & -12.0 & 20.5 & 35.1 & 7.5 & 55.8 & 132.3 & 0 \\ \hline
+        \multirow{6}{*}{\bf Ethnicity} & \bf Asian or Asian British & 12160 & -68.8 & 124.8 & -12.5 & 21.5 & 34.0 & 9.0 & 47.3 & 120.5 & 0 \\ \cline{2-3}
+        ~ & \bf Black, Black British, Caribbean or African & 6545 & -72.4 & 121.3 & -17.5 & 29.1 & 44.2 & 13.0 & 43.4 & 114.6 & 0 \\\cline{2-3}
+        ~ & \bf Mixed or multiple ethnic groups & 1645 & -72.2 & 122.6 & -14.5 & 25.5 & 38.5 & 10.0 & 46.7 & 116.8 & 0 \\ \cline{2-3}
+        ~ & \bf Other ethnic group & 2085 & -75.6 & 132.0 & -13.0 & 23.8 & 38.3 & 9.0 & 51.8 & 127.0 & 0 \\ \cline{2-3}
+        ~ & \bf Unknown & 955 & -152.1 & 169.6 & -43.0 & 17.7 & 26.7 & 6.0 & 134.5 & 168.7 & 0 \\ \cline{2-3}
+        ~ & \bf White & 213240 & -87.8 & 145.0 & -16.0 & 20.4 & 33.6 & 8.5 & 67.4 & 142.2 & 0 \\ \hline
+    \end{tabular}
+    \caption{Number of additional days in the year following the stroke event the stroke patient spends in each location compared to their pairwise matched control patient (showing data for the matched features).}
+    \label{tab:stroke_v_control_location_post_stroke}
+\end{table}
+
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%% MACHINE LEARNING %%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%% FEATURE SELECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Explainable machine learning models (to predict location in the first year following their stroke)}
+
+\subsubsection{Feature selection}
+
+We selected 12 features to be included in each of the prediction XGBoost models (see supplementary material for full sequential feature selection results):
+
+\begin{enumerate}
+    \item Acute treatment use/time: Represented as a categorical feature with 8 levels, using 4.5 hours from onset of stroke to treatment as the early/late cutoff (no treatment, only early IVT, only late IVT, early IVT and MT, early IVT and late MT, late IVT and late MT, only early MT, only late MT).
+    \item Prior disability level: Disability level (mRS) before stroke
+    \item Stroke severity: Stroke severity (NIHSS) on arrival
+    \item Age: Middle of 5 year age bands
+    \item Any atrial fibrillation diagnosis: Patient has a diagnosis of atrial fibrillation (either previously diagnosed or new)
+    \item Onset time type: Onset time recorded is precise time, a best estimate or not known
+    \item Onset in hospital or arrival within 6 hours: Combines onset in hospital and onset to arrival features into a single categorcial feature with 3 levels (onset in hospital, arrival within 6 hours, arrival beyond 6 hours)
+    \item Stroke type: Ischaemic, haemorragic, not known.
+    \item IMD quintiles (2019): Where 1 is most deprived, and 5 is least deprived
+    \item Covid status: Categorical feature with 4 levels, using 30 days to define whether a patient had a covid infection, and 12 months to define whether a patient is in the covid vaccinated cohort  at the time of the date of event (vaccinated and infected, just vaccinated, just infected, neither).    
+    \item Diabetes (binary)
+    \item Ethnicity: 5 categorical level
+\end{enumerate}
+
+A model using these 12 features was able to provide 84.4\%, 96.5\% and 96.8\% of the accuracy obtained when all 52 features were used (R-squared: 12.0 vs 14.3, 38.0 vs 39.4, 34.7 vs 34.9 for in care, at home and dead respectively). Correlations between the 12 features were measured - they were largely independent of each other \ref{Fig:correlation_matrix}. Ignoring comparisons between levels from the same one hot encoded feature, all R-squared were less than 0.05 except (a) arrive within 6 hours and acute treatment (R-squared 0.14 with no treatment, 0.12 with only early IVT), (b) prior disability level and age (0.13), (c) onset time type and acute treatment (precisely known onset time and no treatment 0.11, precisely known onset time and only early IVT 0.10, onset unknown and no treatment 0.05), (d) age and any atrial fibrillation diagnosis (0.08), (e) prior disability level and stroke severity (R-squared 0.06).
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=\textwidth]{images/output_results_from_SDE/178_correlation_heatmap_exploration.jpg}%
+\hspace*{0.05cm}
+\caption{Correlation matrix between the 12 features with categorical features represented as OHE features.}
+\label{Fig:correlation_matrix}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%% ACCURACY %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Model accuracy}
+
+With all 52 features, mean R-squared was 14.261\% (0.518\% standard deviation across the 5 k-folds), 39.377\% (0.232\% standard deviation across the 5 k-folds), 35.847\% (0.128\% standard deviation across the 5 k-folds) for in care, at home and dead respectively.
+
+With the selected 12 features, mean R-squared was 12.031\% (0.414\% standard deviation across the 5 k-folds), 38.037\% (0.307\% standard deviation across the 5 k-folds), 34.693\% (0.130\% standard deviation across the 5 k-folds) for in care, at home and dead respectively.
+
+All subsequent work described used the first k-fold split (80\% data used for training the models, and 20\% used for test results).
+
+
+\subsubsection{SHapley Additive exPlanation (SHAP) values}
+
+%%%%%%%%%%%%%%%%%%%%%% SHAP AT POPULATION LEVEL / Global patterns
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+See supplementary material for analysis of consistency of results across 5 kfolds. Here we will report on the first kfold.
+
+The SHAP baseline value for the first kfold is 23.4?, 268.8? and 80.0 ?days for the in care, at home and dead prediction XGBoost models respectively. To understand general characteristics affecting the predicted durations, the violin plots (figures \ref{Fig:violins_exploratory_population_acute_treatment_time}, \ref{Fig:violins_exploratory_population_age}, \ref{Fig:violins_exploratory_population_any_afib_diagnosis}, \ref{Fig:violins_exploratory_population_covid_status}, \ref{Fig:violins_exploratory_population_diabetes}, \ref{Fig:violins_exploratory_population_disability}, \ref{Fig:violins_exploratory_population_IMD_QUINTILES},
+\ref{Fig:violins_exploratory_population_onset in hospital or arrival within 6 hours},
+\ref{Fig:violins_exploratory_population_ethnicity},
+\ref{Fig:violins_exploratory_population_stroke_type},
+\ref{Fig:violins_exploratory_population_stroke_severity_arrival},
+\ref{Fig:violins_exploratory_population_onset_time_type}) show the range of effect each feature value has on adjusting the corresponding baseline value (across the 77,670 test patients which were not used to train the model), for each of the three models, once corrected for the other factors. Violin plots are in feature order of impact on prediction.
+
+Patients with a mild stroke spend more time at home, moderate-severe stroke spend more time in care, then beyond NIHSS20 more patient die sooner, with the most severe strokes contributing to a patient dying up to ~290 days sooner.
+
+COPY IN treatment effect (pattern same as causal)
+
+Having a no, or high prior disability contributes to a shorter length of stay. With increased mRS, time at home reduces and time dead increases.
+
+Black or mixed multiple spend more time (8 days) in care than white/asian, but more time at home and less time dead than white people. Being non white is advantageous in mortality after stroke.
+
+Patients having their stroke onset in hospital spend longer in hospital after their stroke (12 days) or die sooner (30 days). Of those having onset out of hospital, those arriving beyond 6 hours spent more time at home and died later (a small effect, only 3 days).
+
+Younger patients spent more time at home (25 days), whereas the older patients died sooner (20 days).
+
+Having covid infection in last 30 days increases time in care whether had vaccination or not. Having an infection reduces time at home, and die sooner, but having a vaccination improved these durations.
+
+Ischaemic strokes spend less time in care, more time at home and die later.
+
+The remaining 4 features (atrial fibrilation, diabetes, onset time type, IMD) each have a marginal impact (mean <10 days) on the prediction.
+An atrial fibrilation or diabetes diagnosis contributes to the patient to spend more time in care, less time at home, sooner die. Knowing the onset time precisely reduces time spent in care, increased time at home and reduces time dead. More deprived spend more time in care, less at home, more time dead, whereas less deprived spend less time in care, more time at home and less time dead.
+
+Feature values that contributed to more days in care (median more than 10 days) were: NIHSS 15-20 (+18 days), late MT (+ 10 days), Black (+10 days), onset in hospital (+12). 
+
+Feature values that contributed to more days at home  (median more than 10 days) were: NIHSS<5 (+30-45 days), prior disability mRS0 (+10 days), non-white (+30-40 days), onset out of hospital (45 days difference), young (+30 days).
+
+Feature values that contributed to an earlier death (median more than 10 days) were: NIHSS 21+ (150-220 days), late IVT with late MT +55 days), prior disability mRS4-5 (50-60 days), white (other categories are -40 days vs 0 days), onset out of hospital (+30 days), older (50 days difference between young and old), covid infection without vaccination (+25 days), haemorragic (+15 days), afib (+10 days).
+
+% stroke_severity_arrival
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_stroke_severity_arrival_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature stroke severity arrival. Showing the contribution of stroke severity arrival from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_stroke_severity_arrival}
+\end{figure}
+% acute_treatment_time
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_acute treatment time_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_acute treatment time_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature acute treatment time. Showing the contribution of acute treatment time from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_acute_treatment_time}
+\end{figure}
+
+
+% disability
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_prior_disability_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_prior_disability_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_prior_disability_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature prior disability. Showing the contribution of prior disability from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_disability}
+\end{figure}
+
+
+% ETHNICITY
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]
+{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_ethnicity_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_ethnicity_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_ethnicity_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature ethnicity. Showing the contribution of ethnicity from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_ethnicity}
+\end{figure}
+
+
+
+
+% onset in hospital or arrival within 6 hours
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_onset in hospital or arrival within 6 hours_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature onset in hospital or arrival within 6 hours. Showing the contribution of onset in hospital or arrival within 6 hours from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_onset in hospital or arrival within 6 hours}
+\end{figure}
+
+
+% age
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_age_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_age_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_age_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature age. Showing the contribution of age from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_age}
+\end{figure}
+
+
+% covid_status
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_covid status_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]%75
+{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_covid status_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_covid status_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature covid status. Showing the contribution of covid status from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_covid_status}
+\end{figure}
+
+
+
+% stroke_type
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_stroke type_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_stroke type_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_stroke type_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature stroke type. Showing the contribution of stroke type from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_stroke_type}
+\end{figure}
+
+
+
+% any_afib_diagnosis
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_any_afib_diagnosis_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature any afib diagnosis. Showing the contribution of any afib diagnosis from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_any_afib_diagnosis}
+\end{figure}
+
+
+% diabetes
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_diabetes_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_diabetes_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_diabetes_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature diabetes. Showing the contribution of diabetes from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_diabetes}
+\end{figure}
+
+
+
+% onset_time_type
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_shap_violin_onset time type_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_shap_violin_onset time type_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_shap_violin_onset time type_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature onset time type. Showing the contribution of onset time type from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_onset_time_type}
+\end{figure}
+
+% IMD_QUINTILES
+
+\begin{figure}[!htb]
+\hspace*{0cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/180_xgboost_in_care_exploratory_population_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/190_xgboost_at_home_exploratory_population_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg
+}%
+\hspace*{0.05cm}
+\includegraphics[width=53.5mm]{images/output_results_from_SDE/200_xgboost_dead_exploratory_population_12_features_violin_shap_IMD_2019_QUINTILES_kfold0.jpg}
+\\[0cm]
+\begin{tabular}{m{20mm} m{50mm} m{50mm} m{50mm}}
+& a: In care & b: At home & c: Dead
+\end{tabular}
+\caption{SHAP values for feature IMD quintiles. Showing the contribution of IMD quintiles from the 3 models predicting the duration spent a: in care, b: at home, c: dead in the first year following a stroke.}
+\label{Fig:violins_exploratory_population_IMD_QUINTILES}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%% SURVIVAL ANALYSIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Survival analysis following stroke}
+
+Black or mixed multiple spend less time dead than white people, as also seen in the SHAP values. 
+
+We defined the baseline characteristics of a patient to be: (SHOULD FEATURE male BE INCLUDED? XGBOOST NOT HAVE THIS) white; under 60 years old; living in the 20\% most deprived area; had no covid vaccination within 12 months of stroke event; had no covid infection within 30 days of stroke event; receive no acute treatment (thrombolysis or thrombectomy), no diabetes, no arterial fibrillation, precise known onset time, infarction,  onset out of hospital and arrive within 6 hours. The survival rate of the baseline stroke patient for the exploratory population and the causal population in the first year following a stroke event is shown in \ref{stroke_survival_baseline}. Within 50 days, 10.5\% of the exploratory stroke population have died, with 22.0\% being dead by the end of the first year following their stroke. In comparison, 9.3\% of the causal stroke population have died within the first year of the stroke event, with 19.9\% being dead at the end of the first year  following their stroke \ref{control_survival_baseline}.
+
+\begin{figure}[ht]
+  \centering
+  \subfloat[Exploratory population.]{\includegraphics[width=0.4\textwidth]{./images/output_results_from_SDE/ccu085_040_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke_exploratory_population.png}\label{stroke_survival_baseline}}
+  \hfill
+  \subfloat[Causal population.]{\includegraphics[width=0.4\textwidth]{./images/output_results_from_SDE/ccu085_050_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke_causal_population.png}\label{control_survival_baseline}}
+  \caption{Baseline survival rate in the first year following the stroke event for a baseline patient (white, under 60 years old, living in the most deprived 20\% area, had no covid vaccination within 12 months of stroke event, had no covid infection within 30 days of stroke event, receive no acute treatment (thrombolysis or thrombectomy), no diabetes, no atrial fibrilation, ischaemic stroke, onset outside of houpital and arrived within 6 hours. LHS shows the stroke exploratory population, RHS shows the stroke causal population (where all patients had an ischaemic stroke onset out of hosptial and arrived within 6 hours of onset).}
+\end{figure}
+
+% \begin{figure}[!tbp]
+% \centering
+%  {\includegraphics[width = 3in]{./images/output_results_from_SDE/ccu085_053h_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png}}\\
+%  {\includegraphics[width = 3in]{./images/output_results_from_SDE/ccu085_053h_baseline_hazard_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke.png}}\\
+%  \caption{Baseline survival rate in the first year following a stroke for a white male baseline patient.}
+%  \label{fig:survival_baseline}
+% \end{figure}
+
+The effect of a patients characteristics deviating from this defined baseline stroke patient (for each population: exploratory and causal) are shown as hazard ratios for each feature as a forest plot \ref{fig:stroke_forest_plot} with the features ranked by impact on survival (also refer to the csv table uploaded, \ref{tab:hazard_ratios}).
+
+The five characteristics (deviating from the baseline characteristics) that have the largest impact on increasing the risk of death of a stroke patient (from the causal population) in the first year following their stroke are: 1. having a severe stroke (rather than no stroke symptoms); 2. having a moderate to severe stroke (rather than no stroke symptoms); 3. being over 80 years old (rather than under 60); 4. having a prior disability of mRS5 (rather than mRS0); 5. having a prior disability of mRS4 (rather than mRS0). This increases their risk of death by 760\%, 442\%, 437\%, 298\%, 285\%. 
+
+The five characteristics (deviating from the baseline characteristics) that have the largest impact on increasing the risk of death of a stroke patient (from the exploratory population) in the first year following their stroke are: 1. having a severe stroke (rather than no stroke symptoms); 2. being over 80 years old (rather than under 60); 3. having a moderate to severe stroke (rather than no stroke symptoms); 4. having a prior disability of mRS5 (rather than mRS0); 5. having a prior disability of mRS4 (rather than mRS0). This increases their risk of death by 727\%, 424\%, 402\%, 259\%, 254\%. 
+
+The five characteristics (deviating from the baseline characteristics) that have the largest impact on reducing the risk of death of a stroke patient (from the causal population) in the first year following their stroke are: 1. having early IVT and MT (rather than no treatment); 2. early MT only; 3. mixed ethnicity (rather than white); 4. black (rather than white); 5. early IVT with late MT (rather than no treatment). This reduces a patients risk of death by (??do we need to 100 -?) 46,63,65,66,68 (respectively).
+
+The five characteristics (deviating from the baseline characteristics) that have the largest impact on reducing the risk of death of a stroke patient (from the exploratory population) in the first year following their stroke are: 1. having early IVT and MT (rather than no treatment); 2. early MT only; 3. early IVT with late MT; 4. black (rather than white); 5. asian (rather than white). This reduces a patients risk of death by (do we need to ??100 -?) 42, 57, 62, 65, 67 (respectively).
+
+For the matched control population, the ranked hazard ratios are: over 80s (3364\% increase); 60-80 years (575\% increase); covid infection no vaccination (418\% increase); covid infection with vaccinaton (207\% increase); no covid infection with vaccination (7\% increase); female (14\% reduction); mixed ethnicity (15\% reduction); IMD 2 (17\% reduction); other ethnicity (24\% reduction); IMD 3 (27\% reduction); IMD 4 (32\% reduction); IMD 5 (39\% reduction); ethnicity unknown (41\% reduction); black ethnicity (45\% reduction); asian ethnicity (45\% reduction).
+
+% \begin{figure}[ht]
+% \centering
+%  {\includegraphics[width = 6.1in]{./images/output_results_from_SDE/ccu085_053h_cox_hazard_ratios_for_survival_365_days_post_stroke.png}}\\
+%  \caption{Forest plot for the survival rate of a stroke patient in the year following their stroke. Taking the baseline characteristics as male, white, under 60 years old, living in the most deprived IMD quintile, had no covid vaccination within 12 months of stroke event, had no covid infection within 30 days of stroke event, receive no acute treatment (thrombolysis or thrombectomy)}
+%  \label{fig:forest_plot}
+% \end{figure}
+
+
+\begin{figure}[ht]
+  \centering
+  \subfloat[Exploratory population.]{\includegraphics[width=0.45\textwidth]{./images/output_results_from_SDE/ccu085_040_forest_plot_hazard_ratios_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke_exploratory_population}
+  \label{fig:stroke_forest_plot}}
+  \hfill
+  \subfloat[Causal population.]{\includegraphics[width=0.45\textwidth]{./images/output_results_from_SDE/ccu085_050_forest_plot_hazard_ratios_from_cox_proportional_hazard_ratio_model_survival_in_year_following_stroke_causal_population}
+  \label{fig:control_forest_plot}}
+  \caption{Forest plot for the survival rate in the year following a stroke. Taking the baseline characteristics as white, under 60 years old, living in the 20\% area most deprived, had no covid vaccination within 12 months of stroke event, had no covid infection within 30 days of stroke event, receive no acute treatment (thrombolysis or thrombectomy), no stroke symptoms on arrival, no prior disability, no diabetes, no atrial fibrillation, ischaemic stroke, onset out of hospital and arrive within 6 hours. LHS shows the stroke exploratory population, RHS shows the stroke causal population.}
+\end{figure}
+

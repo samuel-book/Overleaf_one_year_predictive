@@ -1,0 +1,110 @@
+\section{Discussion}
+
+%%%%%% INCLUDE %%%%%%
+
+% Summarise main points
+% Compare to other work
+% Clinical significance
+% Limitations & future work
+
+We can only explain ~7\% variation for time in care, as there is a lot of other factors that affects the time spent in care in the year after stroke, lots of unmeasured variance (how well hospital able to discharge, the decision to release from NHS is dependant on home situation, suitability of accommodation, family/carer, HES data in some areas of country people will pass through different pathways of care - HES data in terms of predicting time at home due to variation of what counts as care). The 0.12 represents potential for NHS revolution, a lot of variation in care, so no efficiency can be gained as we don’t have this information. [MJ:] We used SSNAP data to look at predictors of institutionalisation rate, the strongest was availability of local care homes. There are drivers not included in this dataset. 
+
+We can still pick up very clear patterns. Better at predicting time dead and at home. The model does not have the factors for 93\% of what does affect time in care is not in the model (which is about the hospital, or other things about the patient). 
+This model is still reliable in that for stroke severity, see clear patterns, and reliably informing us on the n\%. We don’t fully understand what drives the length of time someone stays in care.
+
+Putting aside economic value, clinically it’s irrelevant other than cost. Use surrogate markers to identify patients spent. Increased rehabilitation needs, and surrogate markers (time at home vs in care) miss this.
+
+Predicting time at home, measure 38\% of the variation of patients there. That’s a good number for these type of models.
+
+MU: Interpretation. Late MT was arguably harmful based on these results. If this was analysis on data, MT is associated with poorer outcomes. IS that correct within the causal model you’ve developed. We’ve used more flex ML model, but we’ve set out to isolate treatment. How does this resonates with the clinical participants? Other reflection, when 3 outcomes that are constrained, there are ways to present them not as separate findings. Represent as constrained findings – lets pick that up.
+
+GC: Experience of the centre of the individual operator. Between 19 and 23 increase in INR (international normalised ratio) and??? Look at volume of operator or centre to its influence on outcome.
+
+
+Discussion point – are we being sufficiently urgent with MT when late MT is not particularly beneficial and could even be harmful.
+
+Can see more change in earl violins, when do things late outcomes is less good. An important message to get out into the real world. Wondering if people taken eye off prize now it’s embedded more routinely. Giving treatment quickly if safe, of course.
+
+
+ Does clinical community need to speed up use of IVT and MT. They do think need to speed up and treat more. We are taking twice as long to give MT as HERMES. Expect in country not get HERMES benefit as we’re taking too long. Ignorance, struggling to see models give the answers we want. I need to do more slow thinking. How reliable and valuable we think this model is. Looking to MJ, my understanding S2 is in SSNAP described variation. Is this just first cut of data, and MA is modest say it’s doing better.
+
+MJ: MT is not as stable as IVT (encompasses period of MT growth). Limitations in this dataset, always start with observational data, it’s got to contrast (DAWN and DEFUSE) highly selected patients. Patients included as late, are later than the earlier patients. Earlier patients more likely to be last ditch relatively less selected on advanced imaging. Emphasis, the importance of apply RTD in clinical practice, there’s a loss of ethicacy as less selective to randomised trials, emphasis the super selectivity of the clinical trials prevailing at the time.
+
+MA: Error bars for the clinical trials. Or fit has error bars on the red line from the model. We are triangulating data from various sources and seeing same story. The big area is things affecting time in care. (time dead, at home and outcomes are modelled with more variation included).
+
+
+MJ:  Interesting for cross ref with findings from S london. 50\% non white origin with stroke over 30 years. Shown same things. Stroke occurs at younger age, and has better outcomes.
+Ajay: health inequalitys and ethnic minorities. Have stoke younger age, incidence of stroke after covid gone up in afro carribeans in S London, and inequalities in terms of access to … Mortality was better in afro carribean group compared to white population, but disability rates were worse than current white population. Probably multifactorial, is it down to genetics or prevention, or healthy behaviour, raises important hypothesis that need addressing. 
+MJ: Thinking on feet. What have done with ethnicity is isolate it. But of course have data from the 2 hours of care in catalyst in terms of stroke unit access and time to stroke unit. Look at key quality of access to care. Given discussion of covid and quality of care. Could shed some useful light on that.
+MA: interms of IVT, ethnicity not affect time to scan, but non white people turned up later. Appeared the bits we were looking at, the care factors appeared similar.
+
+Ajay: found that also. Disparaties time to arrival.
+
+MA: Could address, but expensive for campaigns to get to hospital quickly
+
+Ajay: looked into effect on onset in hospital in S London, those in hospital are in due to complex co-morbidities, access to key interventions is a paradox, better leaving hospital and call ambulance is quicker than it happening in hospital.
+
+It is known that deprived areas have strokes earlier.
+
+\subsubsection{Additional work}
+Is there a way to explore why outcome appearing worse for white people in data of qualitative work. 
+
+We don’t fully understand what drives the length of time someone stays in care. Look at hospital organisational factors. Tight errors.
+
+Have we considered the year of the procedure in analysis? Got 2 yrs worth of data, at a time when MT progressively introduced and so patients selected (early and late) different 2019 vs 2023.
+
+Look at rate of decay of the treatment benefit effects? More rapid with either treatment? (tricky as two treatments at different times).
+
+We can have information about queuing effects in a dataset that is coming to us, that we’ve not got in this data. SSNAP available in SDE includes on first few days in SSNAP and not where you are going on to.  NHS care is any cause – so it’s if you come back with heart attack then we are predicting that.
+
+Any capacity to identify the tipping point. Cut off at 4.5, why not another
+
+MA: time cut off to give combination of treatments. When do you get no benefit, we get a nice decay, crosses line at 7 hours. Nice to do with potentially 2 interacting treatments.
+
+Ajay: gave IVT within 2hour 20mins. Beyond this no harm, but no additional benefit. Narrative from clinical per
+
+MJ: IVT beyond 4.5 is last throw of dice. Atypical. MT in people within 6 hours. Make same observation of time as a continuous variable,.
+
+MA: Same time for both. SHAP should include those interactions. Lets talk with people about best way to do time interactions as best we can.
+
+LF: Really interesting to take to the patient group. What point, presumably there’s some risk with MT as well associated risk, infection? Misplace tools and cause haemorrhage? Just knowing where patients would set that it’s less effective and same risks, where’s the balance point between risk and effectiveness. Interesting where patients set that.
+
+MA: Disability at discharge not available to us here. But know it from other data, it’s about this 7 hour cutoff.
+
+MK: Using 2 continuous time variables: wary about it as could get into serious issues to have a treatment after 1 hour and another after 10 hours, estimate a plane with big gaps and not patients fall into that area. Gets a bit horrible,
+
+MA: Using decision trees, they don’t extrapolate where there’s not data, often think need to plot where competence of model is. Model works within these bounds. 
+
+CHAT MJ: Really interesting point Leon. We touch in it in another area of proposed research, which is late thrombectomy in people who already have a large visible stroke present on their initial CT scan,
+
+
+%%%%%%%%%%%%% Summarise main points %%%%%%%%%%%%%
+As thrombolysis carries a risk of harm (principally brain haemorrhage), determining whether a patient is likely to have an improved outcome with thrombolysis requires considering whether there is likely to be an average improvement in disability score (the mid point of predicted discharge disability probabilities), and whether there could be an increased risk of severe harm, which we defined as a disability at discharge of mRS 5-6 (severe disability or death). In order to create a simpler category of `improved outcome' with thrombolysis we took a conservative view that there should be better predicted average outcomes and a reduction of risk of death or severe disability. In this work we did not model risk of haemorrhage in isolation as we wished to focus on all-cause outcomes and overall net benefit/risk of thrombolysis.
+
+We found general agreement between actual thrombolysis use and best predicted outcomes, though we found decisions based on the outcome model would support higher use of thrombolysis than is actually the case. Of those who did not receive thrombolysis, the outcome model predicted that nearly half of them would have likely benefited from thrombolysis. Of those that did receive thrombolysis we found about one in four may be being given thrombolysis without there being predicted benefit. Of those receiving thrombolysis when they would likely not benefit from it, or vice-versa, we found no simple way to identify patients from any individual patient feature; it is a combination of patient features that affect whether a patient will likely receive benefit from thrombolysis or not. For example, the chance of benefit is improved with more severe stroke or earlier use of thrombolysis. As such, with milder stroke, it may be necessary to give thrombolysis earlier (all other patient characteristics beings equal) in order to achieve net benefit. Such interaction effects on outcome are not easy to capture in binary cut-offs, such as those described by stroke severity or time limits commonly used in clinical guidelines.
+
+We found that the hospital attended affected reported outcome after stroke, after allowing for other patient characteristics. This could be due to 1) some hospitals discharging earlier and with more disability (e.g. with community rehabilitation available), 2) effects of other hospital treatments on outcomes (e.g. better/worse stroke unit care), or 3) hospitals assessing disability at discharge differently. From our model we cannot speculate further, but by including stroke team in the model we adjust the model for these effects, allowing a clearer view of other patient features affecting outcome.
+
+There was an apparent trade-off in decision-making between hospitals. Those hospitals who gave thrombolysis to more patients who would benefit from it (higher \textit{sensitivity}) were also more likely to give thrombolysis to more patients who would not benefit from it (lower \textit{specificity}). This represents a trade-off between `\textit{Miss no benefit}' and `\textit{Do no harm}'. Maximising benefit while minimising harm is likely to require more sophisticated guidance on use of thrombolysis, such as that indicated by our model.
+
+In order to compare decisions and outcomes for key parts of the analysis we simplified the outcome in a dichotomised \textit{good} vs \textit{bad}. The spread of benefit and disbenefit showed many patients may be at the border of benefit and disbenefit which is obscured to some extent with the dichotomised outcome. We used a conservative measure of a good outcome where the average disability should be improved while also reducing the risk of the worst outcomes. Of those we classified as a bad outcome from thrombolysis, two thirds had an improvement in \textit{either} average disability or probability of being discharged mRS 5-6.  
+
+%%%%%%%%%%%%% Compare to other work %%%%%%%%%%%%%
+
+Our work supports that use of thrombolysis can improve outcome in many stroke patients (see our companion paper comparing our observed benefit of thrombolysis to clinical trials \cite{pearn_thrombolysis_2024}) and many patients may currently be missing benefit. In previous work we have identified that willingness to use thrombolysis differs between stroke teams \cite{allen_use_2022, allen_using_2022}. In this current work we observe that this willingness to use thrombolysis is associated with a predicted trade off between sensitivity (not missing benefit) and specificity (not doing harm) of treatment.
+
+%%%%%%%%%%%%% Clinical significance %%%%%%%%%%%%%
+
+The major significance of this work is that there appears to be potential to improve use of thrombolysis both by increasing use of thrombolysis (many patients appear to be missing the benefit of thrombolysis), but also by better targeting of thrombolysis to avoid those patients more likely to be harmed by thrombolysis. It is possible that, while not perfect, better use and targeting of thrombolysis could be achieved by some simple algorithm (such as a decision-tree that requires no on-scene computational prediction). 
+
+%%%%%%%%%%%%% Limitations & future work %%%%%%%%%%%%%
+
+\subsection{Study limitations and further work}
+
+Our model is limited to data available in SSNAP. Though the accuracy overall is good, it is not intended for individual clinical decision-making. There may be unmeasured factors not in SSNAP that are contributing to the decision to treat and to outcomes. Our focus was on overall patterns present in the data. In the absence of individual patient-level predictions, we suggest future work should focus on providing more sophisticated guidance (though without requiring specialist models) on selection of patients for thrombolysis. There is also significant scope to use the same techniques to study variation in use of thrombectomy, and how that variation affects patient outcomes.
+
+The outcome measure available for the study to use, mRS at discharge, is a measure of independence, and as such, may not capture other life changing symptoms of stroke, such as mental and cognitive healthy and well-being.
+
+In the current study we predicted overall outcome, rather than specifically estimating risk of thrombolysis-induced haemorrhage. Future work could investigate separate risk and benefit models (separately predicting risk of thrombolysis-induced haemorrhage and benefit only in absence of thrombolysis-induced haemorrhage). 
+
+
